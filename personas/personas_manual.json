@@ -1,24 +1,163 @@
 {  "personas": [
     {
       "id": "P1",
-      "name": "Frequent Activity Tracker",
-      "description": "A user who relies on the app to log workouts frequently and expects stable performance.",
+      "name": "Noor, an Overwhelmed Professional",
+      "description": "Noor uses Calm when stress builds up during the day and she needs quick emotional relief. She is not looking for a complex wellness routine; she wants fast, dependable support when she feels anxious, panicked, or emotionally overwhelmed.",
       "derived_from_group": "G1",
       "goals": [
-        "Track workouts consistently",
-        "Log activity quickly"      ],
+        "Reduce anxiety and emotional overwhelm in the moment",
+        "Use short calming activities that fit into a busy day",
+        "Feel mentally grounded during stressful periods"
+      ],
       "pain_points": [
-        "App crashes during logging",
-        "Workout data sometimes disappears"      ],
+        "Stress and anxiety escalate quickly during work or personal life",
+        "Needs support that works immediately during panic or overwhelm",
+        "Has limited time and cannot commit to long sessions"
+      ],
       "context": [
-        "Logging activities immediately after workouts",
-        "Using the app during outdoor exercise"      ],
+        "Uses Calm during stressful workdays, anxious evenings, or moments of panic",
+        "Often turns to breathing exercises, guided meditations, or short calming sessions",
+        "May already be dealing with ongoing stress, anxiety, or emotional exhaustion"
+      ],
       "constraints": [
-        "Logging must be reliable",
-        "Data should not be lost"       ],
+        "Support content must be quick to access and effective in a short time",
+        "The experience should feel soothing rather than mentally demanding",
+        "The app should be reliable during moments of high stress"
+      ],
       "evidence_reviews": [
-        "rev_12",
-        "rev_45"      ]
+        "rev_18",
+        "rev_314",
+        "rev_427",
+        "rev_621"
+      ]
+    },
+    {
+      "id": "P2",
+      "name": "Ibrahim a Cautious Subscriber",
+      "description": "Ibrahim is interested in Calm's content, but he is very sensitive to pricing, subscriptions, and free trial terms. He becomes frustrated when the app feels misleading, especially when most content is locked or when billing and cancellation are unclear.",
+      "derived_from_group": "G2",
+      "goals": [
+        "Try the app before committing financially",
+        "Understand exactly what is free and what is paid",
+        "Avoid unwanted charges and cancel easily if needed"
+      ],
+      "pain_points": [
+        "Feels misled by free trial and subscription flows",
+        "Finds too much content locked behind a paywall",
+        "Has difficulty understanding or stopping recurring charges"
+      ],
+      "context": [
+        "Usually starts with the free version or a trial before deciding whether to subscribe",
+        "Checks pricing and value carefully before paying for wellness apps",
+        "May uninstall or leave negative feedback after billing confusion"
+      ],
+      "constraints": [
+        "Pricing, trial duration, and cancellation steps must be transparent",
+        "Some meaningful content should be accessible before payment",
+        "The subscription flow should not create surprise charges"
+      ],
+      "evidence_reviews": [
+        "rev_117",
+        "rev_2027",
+        "rev_4532",
+        "rev_4735"
+      ]
+    },
+    {
+      "id": "P3",
+      "name": "Zain an Offline Listener",
+      "description": "Zain depends on Calm in places where internet access is weak, unavailable, or inconvenient, especially at night or while traveling. She downloads content in advance and expects it to play smoothly offline, so failures in offline mode make the app feel unreliable.",
+      "derived_from_group": "G3",
+      "goals": [
+        "Access downloaded audio without an internet connection",
+        "Use sleep stories and meditations while traveling or offline",
+        "Rely on previously downloaded content without interruption"
+      ],
+      "pain_points": [
+        "Downloaded sessions fail or disappear in offline mode",
+        "Playback errors interrupt sleep or relaxation routines",
+        "Feels premium features are unreliable despite paying for the app"
+      ],
+      "context": [
+        "Uses Calm on airplanes, during travel, in low-connectivity areas, or while sleeping",
+        "Often downloads content ahead of time expecting seamless offline playback",
+        "May use the app at bedtime and does not want the phone connected to the internet"
+      ],
+      "constraints": [
+        "Downloaded content must remain accessible offline",
+        "Offline playback should be stable and predictable",
+        "The app should not require internet access for already-downloaded sessions"
+      ],
+      "evidence_reviews": [
+        "rev_2701",
+        "rev_1769",
+        "rev_1856",
+        "rev_1971"
+      ]
+    },
+    {
+      "id": "P4",
+      "name": "Sobia a frustrated user",
+      "description": "Sobia believes Calm has useful content, but she struggles to find what she needs when she needs it. She often opens the app already tired, stressed, or trying to sleep, so a cluttered and confusing interface makes the experience worse instead of calming.",
+      "derived_from_group": "G4",
+      "goals": [
+        "Find the right meditation, soundscape, or sleep story quickly",
+        "Return easily to favourite or already in progress content",
+        "Use the app without added frustration or confusion"
+      ],
+      "pain_points": [
+        "Search and navigation feel cluttered and disorganized",
+        "Important content is hard to find or buried under recommendations",
+        "The interface increases stress instead of reducing it"
+      ],
+      "context": [
+        "Often uses the app at bedtime or in moments of distress or when already mentally overloaded",
+        "May return repeatedly to the same content and wants easy access to it",
+        "Is especially sensitive to confusing menus, poor categorization, and distracting interface elements"
+      ],
+      "constraints": [
+        "Navigation must be simple and predictable",
+        "Search and categorization should help users find content fast",
+        "The interface should reduce cognitive load during stressful moments"
+      ],
+      "evidence_reviews": [
+        "rev_4133",
+        "rev_98",
+        "rev_744",
+        "rev_2748"
+      ]
+    },
+    {
+      "id": "P5",
+      "name": "Mubarak a tired father",
+      "description": "Mubarak uses Calm as part of his nightly wind down routine. He values soothing audio such as sleep stories, music, soundscapes, and guided meditations because they help him relax, fall asleep faster, and settle a worried mind at the end of the day.",
+      "derived_from_group": "G5",
+      "goals": [
+        "Fall asleep more easily and sleep more peacefully",
+        "Use calming audio to unwind at night",
+        "Manage stress and mental restlessness through soothing content"
+      ],
+      "pain_points": [
+        "Struggles to relax or fall asleep when stressed or anxious",
+        "Needs audio content that is consistently soothing and easy to start",
+        "Relies on bedtime content as part of a regular sleep routine"
+      ],
+      "context": [
+        "Usually opens Calm at night, before sleep, or after waking during the night",
+        "Frequently uses sleep stories, relaxing music, and soundscapes",
+        "May also use the app during the day for quick relaxation or emotional reset"
+      ],
+      "constraints": [
+        "Audio content must be easy to start and pleasant to listen to",
+        "The experience should support uninterrupted bedtime use",
+        "Sleep and relaxation features should feel dependable enough for daily routines"
+      ],
+      "evidence_reviews": [
+        "rev_879",
+        "rev_4233",
+        "rev_1173",
+        "rev_1710"
+      ]
     }
   
   ] 
