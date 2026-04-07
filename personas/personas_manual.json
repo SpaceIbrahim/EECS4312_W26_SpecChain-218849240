@@ -66,7 +66,7 @@
     {
       "id": "P3",
       "name": "Zain an Offline Listener",
-      "description": "Zain depends on Calm in places where internet access is weak, unavailable, or inconvenient, especially at night or while traveling. She downloads content in advance and expects it to play smoothly offline, so failures in offline mode make the app feel unreliable.",
+      "description": "Zain depends on Calm in places where internet access is weak, unavailable, or inconvenient, especially at night or while traveling. He downloads content in advance and expects it to play smoothly offline, so failures in offline mode make the app feel unreliable.",
       "derived_from_group": "G3",
       "goals": [
         "Access downloaded audio without an internet connection",
@@ -79,14 +79,14 @@
         "Feels premium features are unreliable despite paying for the app"
       ],
       "context": [
-        "Uses Calm on airplanes, during travel, in low-connectivity areas, or while sleeping",
+        "Uses Calm on airplanes, during travel, in low connectivity areas, or while sleeping",
         "Often downloads content ahead of time expecting seamless offline playback",
         "May use the app at bedtime and does not want the phone connected to the internet"
       ],
       "constraints": [
         "Downloaded content must remain accessible offline",
         "Offline playback should be stable and predictable",
-        "The app should not require internet access for already-downloaded sessions"
+        "The app should not require internet access for already downloaded sessions"
       ],
       "evidence_reviews": [
         "rev_2701",
