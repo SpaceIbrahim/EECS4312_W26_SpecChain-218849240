@@ -1,35 +1,118 @@
 # EECS4312_W26_SpecChain
 
-## instructions:
-Please update to include: 
-- App name: Calm - Sleep, Meditate, Relax
-- Data collection method
-- Original dataset
-- Final cleaned dataset
-- Exact commands to run pipeline
+Name: Muhammad Ibrahim  
+Student #: 218849240  
+Application: Calm - Sleep, Meditate, Relax
 
-# example
-Name: Muhammad Ibrahim
-Student #: 218849240
-Application: [Calm - Sleep, Meditate, Relax]
+## Project Overview
+This project analyzes user reviews for the Calm application and creates personas, requirements and tests using three different pipelines:
 
-Dataset:
-- reviews_raw.jsonl contains the collected reviews.
-- reviews_clean.jsonl contains the cleaned dataset.
-- The cleaned dataset contains 842 reviews.
+- Manual pipeline
+- Automated pipeline
+- Hybrid pipeline
 
-Repository Structure:
-- data/ contains datasets and review groups
-- personas/ contains persona files
-- spec/ contains specifications
-- tests/ contains validation tests
-- metrics/ contains all metric files
-- src/ contains executable Python scripts
-- reflection/ contains the final reflection
+The goal is to compare each pipeline on its persona, requirements and validation test creation and traceability.
 
-How to Run:
-1. python src/00_validate_repo.py
-2. python src/02_clean.py
-3. python src/run_all.py
-4. Open metrics/metrics_summary.json for comparison results
+## Dataset
 
+### Data collection method
+The raw review dataset was collected from the Google Play Store the `google_play_scraper` library.
+
+### Original dataset
+- File: `data/reviews_raw.jsonl`
+- Source: Google Play Store
+- Size: ~`6000`
+- Collected: `5000`
+
+### Final cleaned dataset
+- File: `data/reviews_clean.jsonl`
+- Final cleaned dataset size: **3930 reviews**
+
+The cleaned dataset was produced by removing duplicates, empty reviews, and extremely short entries, then preprocessing the text by removing punctuation, special characters, emojis, and extra whitespace, converting text to lowercase, removing stop words, and lemmatizing the reviews.
+
+## Repository Structure
+
+- `data/`  
+  Contains raw and cleaned datasets, dataset metadata, and review grouping files.
+
+- `personas/`  
+  Contains persona files for the manual, automated, and hybrid pipelines.
+
+- `spec/`  
+  Contains generated specifications for the manual, automated, and hybrid pipelines.
+
+- `tests/`  
+  Contains validation test files for the manual, automated, and hybrid pipelines.
+
+- `metrics/`  
+  Contains metrics for each pipeline and the summary comparison file.
+
+- `src/`  
+  Contains all python scripts used to collect, clean, generate, validate, and evaluate artifacts.
+
+- `reflection/`  
+  Contains the written reflection comparing the three pipelines.
+
+## Files
+
+### Data
+- `data/reviews_raw.jsonl`
+- `data/reviews_clean.jsonl`
+- `data/dataset_metadata.json`
+- `data/review_groups_manual.json`
+- `data/review_groups_auto.json`
+- `data/review_groups_hybrid.json`
+
+### Personas
+- `personas/personas_manual.json`
+- `personas/personas_auto.json`
+- `personas/personas_hybrid.json`
+
+### Specifications
+- `spec/spec_manual.md`
+- `spec/spec_auto.md`
+- `spec/spec_hybrid.md`
+
+### Tests
+- `tests/tests_manual.json`
+- `tests/tests_auto.json`
+- `tests/tests_hybrid.json`
+
+### Metrics
+- `metrics/metrics_manual.json`
+- `metrics/metrics_auto.json`
+- `metrics/metrics_hybrid.json`
+- `metrics/metrics_summary.json`
+
+### Source Code
+- `src/00_validate_repo.py`
+- `src/01_collect_or_import.py`
+- `src/02_clean.py`
+- `src/03_manual_coding_template.py`
+- `src/04_personas_manual.py`
+- `src/05_personas_auto.py`
+- `src/06_spec_generate.py`
+- `src/07_tests_generate.py`
+- `src/08_metrics.py`
+- `src/run_all.py`
+
+### Prompts
+- `prompts/prompt_auto.json`
+
+### Reflection
+- `reflection/reflection.md`
+
+## How to Run
+
+### 1. Validate repository structure
+```bash
+# Make sure you are in the repo directory
+
+python src/00_validate_repo.py
+```
+### 2. Run the full automated pipeline
+```bash
+python src/run_all.py
+```
+
+### 3. Open metrics/metrics_summary.json for comparison results

@@ -1,5 +1,15 @@
-# Application: [Calm] 
-- Most important difference between pipelines: [The automated pipeline produced broader personas, while the manual pipeline produced more focused personas grounded in specific review groups.]
-- Most useful pipeline: [The hybrid pipeline produced the most balanced outputs because it preserved automation speed while improving clarity and traceability.] 
-- Most surprising finding: [Several automated requirements were grammatically correct but too vague to support reliable test generation.]
-- Observed weakness in the automated pipeline: [Some personas included unsupported assumptions that were not clearly grounded in the reviews.]
+# Application: Calm 
+
+The three pipelines produced noticeably different results even though they were based on the same cleaned review dataset.
+
+The **manual pipeline** produced the best personas out of all the pipelines because each persona was built from carefully selected review groups. The groupings themselves were also more concrete and well defined. This made the personas more focused, and better grounded in specific user feedback. This led to the requirements also being clearer and more well defined to with better traceability to specific user reviews. The coverage of the reviews was not good for the manual pipeline. With there being over three thousand clean reviews it would take a huge amount of time for a human to review all of them and put them into groups.
+
+The **automated pipeline** was the fastest way to generate groups, requirements, personas and tests, but it also had the weakest outputs in almost all places. The most important difference was that the automated personas were broader and less precise than the manual ones. Some personas were very short and contained incorrect assumptions that were not clearly grounded in the actual reviews. A lot of the automated requirements were grammatically correct but too vague to support good test generation. Some requirements were also overlapping eachother. One upside was that all the reviews were covered and the groups generated were mostly great and well defined with there supporting reviews. This is because we were able to to take advantage of clustering algorithms to make sure group were well defined and included all the reviews.
+
+The **hybrid pipeline** produced the most useful overall results. Starting from the automated outputs saved time, and included all of the reviews we cleaned. Through manual refinement we were able to reach the clarity, traceability, and realism of the manual pipeline. The hybrid personas were more balanced because they kept the speed of automation while removing unsupported claims and vague wording.
+
+The pipeline with the **strongest traceability** was the hybrid pipeline. The manual pipeline also had strong traceability, but it did not have the coverage of the hybrid pipeline. The hybrid  benefited from both the automated structure and manual corrections.
+
+The most surprising finding was that some automated requirements looked correct at first glance but were still too ambiguous for dependable test design. This became especially clear when turning them into validation scenarios. Overall, the project showed that full automation is helpful for speed, but human revision is still important for producing clear, grounded, and testable software requirements artifacts.
+
+The most suprising result to come out of the project was the fact that certain automatic requirements would seem correct on initial review yet still be too vague to allow for reliable testing design. Also if a mistake was made in grouping or personas it would propogate a lot more in the automatic pipeline then the manual one. This is because the automated pipeline does not have self corrections like human reviewers do. On the whole, the project demonstrated the usefulness of full automation for efficiency yet necessity of human editing for quality.
