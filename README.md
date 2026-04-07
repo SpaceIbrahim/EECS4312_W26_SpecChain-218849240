@@ -107,12 +107,46 @@ The cleaned dataset was produced by removing duplicates, empty reviews, and extr
 ### 1. Validate repository structure
 ```bash
 # Make sure you are in the repo directory
-
 python src/00_validate_repo.py
+````
+
+### 2. Set your Groq API key
+
+The automated pipeline requires a Groq API key.
+
+#### macOS or Linux
+
+```bash
+export GROQ_API_KEY="your_key_here"
 ```
-### 2. Run the full automated pipeline
+
+#### Windows PowerShell
+
+```powershell
+$env:GROQ_API_KEY="your_key_here"
+```
+
+### 3. Run the full automated pipeline
+
 ```bash
 python src/run_all.py
 ```
 
-### 3. Open metrics/metrics_summary.json for comparison results
+### 4. Open comparison results
+
+Open `metrics/metrics_summary.json` for comparison results.
+
+## Required Python Libraries
+
+Before running the project, make sure these Python libraries are installed:
+
+- groq
+- scikit-learn
+- numpy
+- nltk
+- google-play-scraper
+
+You can install them with:
+
+```bash
+pip install groq scikit-learn numpy nltk spacy google-play-scraper

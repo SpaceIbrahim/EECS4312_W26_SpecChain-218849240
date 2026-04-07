@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 import subprocess
 import sys
 
@@ -6,6 +7,22 @@ import sys
 def repo_root() -> Path:
     # go up one level from src/ to get the repo root
     return Path(__file__).resolve().parent.parent
+
+
+def require_groq_api_key() -> None:
+    api_key = os.getenv("GROQ_API_KEY", "").strip()
+
+    if not api_key:
+        raise EnvironmentError(
+            "GROQ_API_KEY is not set.\n"
+            "Please set your Groq API key before running the automated pipeline.\n\n"
+            "macOS/Linux:\n"
+            '  export GROQ_API_KEY="your_key_here"\n'
+            "  python src/run_all.py\n\n"
+            "Windows PowerShell:\n"
+            '  $env:GROQ_API_KEY="your_key_here"\n'
+            "  python src/run_all.py"
+        )
 
 
 def run_step(script_name: str, expected_outputs: list[str] | None = None) -> None:
@@ -44,6 +61,9 @@ def main() -> int:
     print("starting automated SpecChain pipeline...")
 
     try:
+        # check required API key before running the automated pipeline
+        require_groq_api_key()
+
         # step 1: collect raw reviews from the app store
         run_step(
             "01_collect_or_import.py",
