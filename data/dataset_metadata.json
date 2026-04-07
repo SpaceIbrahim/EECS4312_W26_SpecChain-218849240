@@ -1,0 +1,29 @@
+{
+  "app_name": "Calm",
+  "app_id": "com.calm.android",
+  "source": "Google Play Store",
+  "collection_method": "Collected from Google Play Store using google-play-scraper in src/01_collect_or_import.py",
+  "storefront_language": "en",
+  "storefront_country": "ca",
+  "reviews_requested": 5000,
+  "reviews_extracted": 5000,
+  "total_reviews_reported_by_store": 6499,
+  "raw_dataset_size": 5000,
+  "cleaned_dataset_size": 3930,
+  "dataset_size": 3930,
+  "cleaning_method": "Cleaned using src/02_clean.py",
+  "cleaning_decisions": [
+    "Removed duplicate reviews based on cleaned review text.",
+    "Removed empty reviews.",
+    "Removed extremely short reviews with fewer than 3 words after cleaning.",
+    "Converted all text to lowercase.",
+    "Converted numbers to text.",
+    "Removed punctuation.",
+    "Removed special characters and emojis.",
+    "Removed extra whitespace.",
+    "Removed English stop words.",
+    "Lemmatized remaining words."
+  ],
+  "raw_file": "data/reviews_raw.jsonl",
+  "cleaned_file": "data/reviews_clean.jsonl"
+}
