@@ -2,14 +2,16 @@
 
 ## instructions:
 Please update to include: 
-- App name
+- App name: Calm - Sleep, Meditate, Relax
 - Data collection method
 - Original dataset
 - Final cleaned dataset
 - Exact commands to run pipeline
 
 # example
-Application: [Calm]
+Name: Muhammad Ibrahim
+Student #: 218849240
+Application: [Calm - Sleep, Meditate, Relax]
 
 Dataset:
 - reviews_raw.jsonl contains the collected reviews.
