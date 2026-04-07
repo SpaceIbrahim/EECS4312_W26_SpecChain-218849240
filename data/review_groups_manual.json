@@ -2,11 +2,87 @@
   "groups": [
     {
       "group_id": "G1",
-      "theme": "App crashes during activity logging, THIS IS A AN EXAMPLE, PLEASE REMOVE ",
-      "review_ids": ["rev_12", "rev_33", "rev_45", "rev_89"],
+      "theme": "Users who use Calm to manage anxiety, stress, and emotional overwhelm",
+      "review_ids": ["rev_18", "rev_154", "rev_220", "rev_296", "rev_314", "rev_374", "rev_427", "rev_519", "rev_621", "rev_719"],
       "example_reviews": [
-        "The app crashes every time I log my run.",
-        "Logging workouts causes the app to freeze."
+        "calm literal lifesaver workday stress two thousand twenty six love one step daily activity short enough fit meeting effective enough reset mood",
+        "often stressed anxious state mind endured life medication helpful app use nearly often enough priortize self thing actually helped without fail especially appreciate narrator voice word always put ease nearly immediately amazing thank",
+        "help anxiety keep calm",
+        "calm app helped recover toxic marriage abusive wife helped control flashback ptsd panic attack generalized anxiety disorder thank wonderful program",
+        "calm really help relax manage stress better content soothing easy follow especially like using sleep great app mental well kinda help assignment structure",
+        "never thought could meditate tried daily calm ten minute day take variety topic managing anxiety building gratitude keep interesting also love calm kid section thing help toddler settle nap beautiful well designed app",
+        "app like deep breath digital form whenever feel panic attack high stress coming breathe bubble emergency calm session help reset find centre immediately",
+        "calm life saver need calm get overwhelmed",
+        "app easy use love breathe bubble feature feeling bit overwhelmed take minute make huge difference interface beautiful voice calming work perfectly phone use much data",
+        "wide range soothing story soundscapes help relax drift sleep suffering sleepless night anxiety app really help"
+      ]
+    },
+    {
+      "group_id": "G2",
+      "theme": "Subscription cost and Paywall with limited free content",
+      "review_ids": ["rev_117", "rev_1046", "rev_1160", "rev_2027", "rev_4520", "rev_4532", "rev_525", "rev_3866", "rev_1120", "rev_4735" ],
+      "example_reviews": [
+        "received free trial thirty day say app helped lot past month although day twenty nine canceled free trial keep charged showed canceled day thirty show canceled two thousand twenty seven yes charged year subscription refund policy needless say upset google play store careful free trial calm lesson learned.",
+        "app free feature locked behind subscription yes seven day free trial see want pay said subscription truthfully would want app free download least feature accessible upon installation would pay weekly yearly free app charge resource available greed subscribe like free resource.",
+        "charged yearly fee long seven day free trial ended downloaded app two day ago try opted seven day free trial constitutes yearly payment cancel seven day well checked account today saw full payment taken day signed free trial seven day trial given tried cancel refund given charged two thousand twenty six feel robbed.",
+        "free trial signed seven day free trial may ten th charged yearly rate day cancelled today may fourteen th four day refunded subscription end may ten two thousand twenty six cancelled via google play app way cancel anything via calm app missed actual way cancel subscription instruction given calm false feel deliberately making difficult cancel free trial forced keep cool make feel calm.",
+        "cancel subscription people intentionally making difficult terminate subscription followed link cancel subscription option cancel try uninstall app google play state subscription still active app ridiculously overpriced stuff youtube free cancel subscription wanna get charged day free trial.",
+        "grandson love fall asleep calm sleep story kid visiting signed thought monthly subscription free fourteen day trial however charged fourteen ninety nine one month free trial went back check detail turn fourteen day free trial sign yearly subscription calm make detail clear please stop false advertising taking advantage potential customer canceled next day.",
+        "signed free seven day trial charged straight away keen try app selected seven day free trial charged fifty straight away cancelled immediately requested refund response stick apps know free trial work avoid calm.",
+        "signed seven day free trial calm premium unlocked thought subscription gone today received seventy four charge outrageous even charge app still unlocked premium access want refund unacceptable",
+        "could give zero star would signed free trial cancelled ended still got charged full year subscription forty nine ninety nine tried several time contact calm ticketing service responding taking credit card company next wanted warn others wish read review first look like others similar issue even signed free trial known.",
+        "app seems fine experience ninety five content locked behind paid subscription asked use free trial twice even even got main menu given select option heck even personalized recommendation tab mostly filled locked content perhaps paid version better would like see free version improved first"
+      ]
+    },
+    {
+      "group_id": "G3",
+      "theme": "Offline app usage issues",
+      "review_ids": ["rev_2701", "rev_2981", "rev_591", "rev_1515", "rev_1769", "rev_1782", "rev_1856",  "rev_4340", "rev_4453", "rev_1971"],
+      "example_reviews": [
+        "need offline alternative disappointed know streak broken bc upload daily check response please look way use offline another note like urgently tell marketing department tone pop notification upgrade account free plan user fuuuuulllyyy aware broke free plan need obscene amount reminder upgrade thanks",
+        "glitchy error download content offline.",
+        "used paid version app year plenty content love jeff warren tamara levitt meditation however cost app designer really need overhaul design intuitive slightest app glitchy using offline downloaded content stay even ihave removed close app switching airplane mode otherwise download content error shame think slick enough cost pay",
+        "using paying app two year really enjoy lack basic feature make five first claim download thing listen offline work least work samsung twenty four second sort story narrator adding would make app much user friendly",
+        "love content go sleep story every night suddenly unable access downloaded content offline hope fix soon",
+        "love calm recently work offline downloads show thing downloaded zero available",
+        "premium subscriber last year last month experienced repeated error offline prevents downloaded audio playing audio skip minute restart beginning loop tried deleting redownloading app downloads app avail emailed support week ago response update review rating fixed",
+        "good app concept really struggle offline mode thing downloaded even half time app freak internet connection",
+        "would better able use offline especially people without wifi",
+        "love app soundscapes sleep app constantly break downloads connected internet want phone connected internet sleeping"
+      ]
+    },
+    {
+      "group_id": "G4",
+      "theme": "User Interface and Usability Issues",
+      "review_ids": ["rev_4133", "rev_4514", "rev_146", "rev_1020", "rev_1650", "rev_4009", "rev_35", "rev_98", "rev_744", "rev_2748"],
+      "example_reviews": [
+        "useful app con distracting interface go continue session find one would love repeat hard find categorization suggestion new content distracting pro find helpful use sleep learning relaxing method suggestion discover section library section sub category particularly library section find session progress downloaded liked section etc",
+        "easily least favorite expensive meditation app tried made mistake canceling one week trial paid sixty nine year app plan use aside dark pattern like app unintuitive hard find kind meditation want lot meditation short narrator whose voice vibe well suited give guided meditation interface cluttered extreme",
+        "terrible search searching mindfulness return seven thousand daily calm filtering time remove short meditation thirty min still result short meditation ten min actually find decent meditation apps intuitive also free",
+        "ok content difficult navigate home tab jumble sleep tab slide side list category particular order alphabetical scrolling page category jumbled sensible order search tab see list category option top page instead partway page strange order maybe per popular confusing sleep story ok voice calming overall lacking",
+        "interface getting worse overtime making harder harder find anything newly open ended meditation bell even sound main feature even used app considering canceling subscription edit start meditation go home page turn screen device stop app really getting unusable",
+        "app confusing use user friendly organized well really difficult find something looking go back something favorite thing big group one hundred favorite way even see helpful way meditation good really bad user interface",
+        "content good app disaster hard navigate find thing constantly trying get upgrade share click bunch time get meditation blood pressure sort defeat calming get edmr music streaming wish knew renewing",
+        "desperately want give five star theory love app therapist recommend app client time search friendly especially turning state distress cluttered overwhelming spent long going around circle trying find soundscape thunderstorm gave listened rain leaf like always end please organize mess begging",
+        "app cluttered mess compared headspace choice lack organization overwhelming app also glitchy often telling completed meditation yet hard pick left series present next session open app instead dig insane amount content find series started calm app actually stress regret year long membership",
+        "app feature playlist option wre good app sooooo difficult navigate calm ironically frustrating meed get worked frustrated bedtime trying find favourite setting option pretty unhelpful need photographic memory remember oh setting apps put account detail option sound setting tiny icon top left home screen"
+      ]
+    },
+    {
+      "group_id": "G5",
+      "theme": "Users who enjoy the audio content for relaxation and sleep",
+      "review_ids": ["rev_879", "rev_4233", "rev_28", "rev_1168", "rev_2815", "rev_1173", "rev_315", "rev_1443", "rev_1477", "rev_1710"],
+      "example_reviews": [
+        "one best apps ever used fantastic listening every day really helped find gratitude calmer helped depression feeling frustrated recommend therapist recommend also help fall asleep mind racing feeling angry also listen day need help recentering hitting reset button feel anxious five star",
+        "calm great improving sleep listening sleep story help fall asleep almost always story end also find piano music well many thing enjoy help relax fall asleep quickly wake middle night help get back peaceful sleep time get need press snooze button ready get quickly face new day seven eight hour peaceful restful sleep",
+        "best tool discovered help manage sleep stress level always anxious going bed would tossing turning subscribed app sleep like baby love story soothing sound app helped tool manage sleep pattern monitor stress level",
+        "love app help calm help relax love music best relaxing app could ever get",
+        "love calm love story help sleep love mediation help relax nothing love calm app",
+        "love calm let meditate act soothing aid falling asleep simply relaxing biggest advice new user keep light take meditation seriously wonderful tool mental well getting overly caught lifestyle eventually harm good keep fun manageable",
+        "using calm month truly transformed daily routine variety guided meditation sleep story breathing exercise incredibly soothing well designed love easy navigate app calming sound help relax focus anytime need break sleep story game changer unwinding night overall calm become essential part wellness journey highly recommend",
+        "calm beautifully designed app truly life name guided meditation relaxing music breathing exercise sleep story provides everything needed stress relief better sleep soothing narration high quality content create peaceful experience help calm mind within minute",
+        "calm help relax sleep better guided meditation sleep story wonderful best app peace mind",
+        "great help ran anxiety block bad bout pneumonia app provides wide range therapy soothe calm help fall asleep naturally using soundscapes found inspired nature power human voice narrarated bedtime story guided affirmation fave lyonwood story never fail put night matter anxious never make end tale like light"
       ]
     }
   ]}
