@@ -1,0 +1,201 @@
+{
+  "personas": [
+    {
+      "id": "P1",
+      "name": "Daily Calm Enthusiast",
+      "description": "A busy professional who uses Calm daily to unwind and prepare for work. They appreciate the app's ability to help them relax and feel refreshed.",
+      "derived_from_group": "G1",
+      "goals": [
+        "Start the day feeling refreshed",
+        "Manage stress and anxiety"
+      ],
+      "pain_points": [
+        "Limited free features"
+      ],
+      "context": [
+        "Busy schedule",
+        "High stress levels"
+      ],
+      "constraints": [
+        "Limited time for self-care"
+      ],
+      "evidence_reviews": [
+        "rev_7",
+        "rev_20",
+        "rev_70"
+      ]
+    },
+    {
+      "id": "P2",
+      "name": "Satisfied Calm User",
+      "description": "A meditation enthusiast who loves the Calm app and uses it daily. They appreciate the app's content and features.",
+      "derived_from_group": "G2",
+      "goals": [
+        "Improve meditation practice",
+        "Reduce stress and anxiety"
+      ],
+      "pain_points": [
+        "Limited free features"
+      ],
+      "context": [
+        "Regular meditation practice",
+        "High stress levels"
+      ],
+      "constraints": [
+        "Limited budget for subscriptions"
+      ],
+      "evidence_reviews": [
+        "rev_1",
+        "rev_15",
+        "rev_30"
+      ]
+    },
+    {
+      "id": "P3",
+      "name": "Calmness Seeker",
+      "description": "An individual seeking calmness and relaxation through meditation and sleep stories. They use Calm to manage stress and anxiety.",
+      "derived_from_group": "G3",
+      "goals": [
+        "Improve sleep quality",
+        "Reduce stress and anxiety"
+      ],
+      "pain_points": [
+        "Technical issues with the app"
+      ],
+      "context": [
+        "High stress levels",
+        "Sleep disturbances"
+      ],
+      "constraints": [
+        "Limited technical expertise"
+      ],
+      "evidence_reviews": [
+        "rev_4",
+        "rev_18",
+        "rev_40"
+      ]
+    },
+    {
+      "id": "P4",
+      "name": "Sleep Improver",
+      "description": "An individual struggling with sleep issues who uses Calm's sleep stories to improve sleep quality. They appreciate the app's ability to help them relax and fall asleep.",
+      "derived_from_group": "G4",
+      "goals": [
+        "Improve sleep quality",
+        "Wake up feeling refreshed"
+      ],
+      "pain_points": [
+        "Limited free sleep stories"
+      ],
+      "context": [
+        "Sleep disturbances",
+        "High stress levels"
+      ],
+      "constraints": [
+        "Limited budget for subscriptions"
+      ],
+      "evidence_reviews": [
+        "rev_2",
+        "rev_16",
+        "rev_19"
+      ]
+    },
+    {
+      "id": "P5",
+      "name": "Frustrated Free User",
+      "description": "A user frustrated with the limited features available for free. They want to access more content but are hesitant to pay for a subscription.",
+      "derived_from_group": "G5",
+      "goals": [
+        "Access more features and content"
+      ],
+      "pain_points": [
+        "Limited free features",
+        "Paywall"
+      ],
+      "context": [
+        "Limited budget",
+        "Frustration with app's monetization model"
+      ],
+      "constraints": [
+        "Limited financial resources"
+      ],
+      "evidence_reviews": [
+        "rev_5",
+        "rev_8",
+        "rev_17"
+      ]
+    },
+    {
+      "id": "P6",
+      "name": "Subscription Skeptic",
+      "description": "A user skeptical of the app's subscription model. They want to access features without paying but feel forced to subscribe.",
+      "derived_from_group": "G6",
+      "goals": [
+        "Access features without paying"
+      ],
+      "pain_points": [
+        "Perceived unfairness of subscription model"
+      ],
+      "context": [
+        "Frustration with app's monetization model",
+        "Limited budget"
+      ],
+      "constraints": [
+        "Limited financial resources"
+      ],
+      "evidence_reviews": [
+        "rev_3",
+        "rev_14",
+        "rev_23"
+      ]
+    },
+    {
+      "id": "P7",
+      "name": "Frustrated Technical User",
+      "description": "A user frustrated with technical issues with the app. They experience glitches and crashes that hinder their experience.",
+      "derived_from_group": "G7",
+      "goals": [
+        "Smooth and reliable app experience"
+      ],
+      "pain_points": [
+        "Technical issues with the app"
+      ],
+      "context": [
+        "Frustration with app's performance",
+        "High expectations for app quality"
+      ],
+      "constraints": [
+        "Limited technical expertise"
+      ],
+      "evidence_reviews": [
+        "rev_31",
+        "rev_68",
+        "rev_76"
+      ]
+    },
+    {
+      "id": "P8",
+      "name": "Cancellation Struggle",
+      "description": "A user struggling to cancel their subscription. They experience difficulties with the cancellation process and feel frustrated.",
+      "derived_from_group": "G8",
+      "goals": [
+        "Easily cancel subscription"
+      ],
+      "pain_points": [
+        "Difficulties with cancellation process"
+      ],
+      "context": [
+        "Frustration with app's customer support",
+        "Limited time for customer support"
+      ],
+      "constraints": [
+        "Limited time for self-advocacy"
+      ],
+      "evidence_reviews": [
+        "rev_6",
+        "rev_11",
+        "rev_21"
+      ]
+    }
+  ]
+}

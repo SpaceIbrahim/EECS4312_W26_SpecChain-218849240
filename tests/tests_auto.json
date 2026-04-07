@@ -3,13 +3,178 @@
     {
       "test_id": "T_auto_1",
       "requirement_id": "FR_auto_1",
-      "scenario": "Logging a workout without crashing",
+      "scenario": "Daily meditation session access",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Open the Calm app",
+        "Navigate to the meditation sessions",
+        "Select the daily meditation session"
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "The daily meditation session lasts 10 minutes or less."
+    },
+    {
+      "test_id": "T_auto_2",
+      "requirement_id": "FR_auto_2",
+      "scenario": "Free trial period access",
+      "steps": [
+        "Sign up for the Calm app",
+        "Navigate to the premium features",
+        "Select the free trial period"
+      ],
+      "expected_result": "The user can access a free trial period for premium features."
+    },
+    {
+      "test_id": "T_auto_3",
+      "requirement_id": "FR_auto_3",
+      "scenario": "Subscription model clarity",
+      "steps": [
+        "Log in to the Calm app",
+        "Navigate to account settings",
+        "View subscription details"
+      ],
+      "expected_result": "The user can easily understand the costs and benefits of their subscription."
+    },
+    {
+      "test_id": "T_auto_4",
+      "requirement_id": "FR_auto_4",
+      "scenario": "Loyalty program access",
+      "steps": [
+        "Log in to the Calm app",
+        "Navigate to the loyalty program",
+        "View exclusive content or discounts"
+      ],
+      "expected_result": "The user can access exclusive content or discounts based on their loyalty."
+    },
+    {
+      "test_id": "T_auto_5",
+      "requirement_id": "FR_auto_5",
+      "scenario": "User-friendly interface",
+      "steps": [
+        "Open the Calm app",
+        "Navigate to meditation sessions or sleep stories",
+        "Search for relevant content"
+      ],
+      "expected_result": "The user can easily find and access relevant meditation sessions or sleep stories."
+    },
+    {
+      "test_id": "T_auto_6",
+      "requirement_id": "FR_auto_6",
+      "scenario": "Technical support",
+      "steps": [
+        "Open the relevant Calm feature.",
+        "Perform the action described in the requirement.",
+        "Observe the system response."
+      ],
+      "expected_result": "The user receives a prompt response or resolution to their technical issue."
+    },
+    {
+      "test_id": "T_auto_7",
+      "requirement_id": "FR_auto_7",
+      "scenario": "Sleep stories variety",
+      "steps": [
+        "Open the relevant Calm feature.",
+        "Perform the action described in the requirement.",
+        "Observe the system response."
+      ],
+      "expected_result": "The user can find a sleep story that matches their interests or preferences."
+    },
+    {
+      "test_id": "T_auto_8",
+      "requirement_id": "FR_auto_8",
+      "scenario": "Sleep tracking",
+      "steps": [
+        "Log in to the Calm app",
+        "View sleep data",
+        "Analyze progress and trends"
+      ],
+      "expected_result": "The user can see their progress and trends over time."
+    },
+    {
+      "test_id": "T_auto_9",
+      "requirement_id": "FR_auto_9",
+      "scenario": "Paywall clarity",
+      "steps": [
+        "Open the relevant Calm feature.",
+        "Perform the action described in the requirement.",
+        "Observe the system response."
+      ],
+      "expected_result": "The user can easily understand what features are available for free and what requires a subscription."
+    },
+    {
+      "test_id": "T_auto_10",
+      "requirement_id": "FR_auto_10",
+      "scenario": "Flexible pricing plan",
+      "steps": [
+        "Open the relevant Calm feature.",
+        "Perform the action described in the requirement.",
+        "Observe the system response."
+      ],
+      "expected_result": "The user can choose a plan that fits their needs and budget."
+    },
+    {
+      "test_id": "T_auto_11",
+      "requirement_id": "FR_auto_11",
+      "scenario": "Easy cancellation",
+      "steps": [
+        "Open the relevant Calm feature.",
+        "Perform the action described in the requirement.",
+        "Observe the system response."
+      ],
+      "expected_result": "The user can easily cancel their subscription in a few steps."
+    },
+    {
+      "test_id": "T_auto_12",
+      "requirement_id": "FR_auto_12",
+      "scenario": "Subscription model explanation",
+      "steps": [
+        "Open the relevant Calm feature.",
+        "Perform the action described in the requirement.",
+        "Observe the system response."
+      ],
+      "expected_result": "The user can understand the benefits and features of the subscription."
+    },
+    {
+      "test_id": "T_auto_13",
+      "requirement_id": "FR_auto_13",
+      "scenario": "Stable app experience",
+      "steps": [
+        "Open the relevant Calm feature.",
+        "Perform the action described in the requirement.",
+        "Observe the system response."
+      ],
+      "expected_result": "The user can enjoy a stable and reliable app experience."
+    },
+    {
+      "test_id": "T_auto_14",
+      "requirement_id": "FR_auto_14",
+      "scenario": "Feedback mechanism",
+      "steps": [
+        "Open the relevant Calm feature.",
+        "Perform the action described in the requirement.",
+        "Observe the system response."
+      ],
+      "expected_result": "The user receives a prompt response or resolution to their technical issue."
+    },
+    {
+      "test_id": "T_auto_15",
+      "requirement_id": "FR_auto_15",
+      "scenario": "Easy cancellation",
+      "steps": [
+        "Open the relevant Calm feature.",
+        "Perform the action described in the requirement.",
+        "Observe the system response."
+      ],
+      "expected_result": "The user can easily cancel their subscription in a few steps."
+    },
+    {
+      "test_id": "T_auto_16",
+      "requirement_id": "FR_auto_16",
+      "scenario": "Cancellation process explanation",
+      "steps": [
+        "Open the relevant Calm feature.",
+        "Perform the action described in the requirement.",
+        "Observe the system response."
+      ],
+      "expected_result": "The user can understand the steps involved in cancelling their subscription."
     }
   ]
 }
