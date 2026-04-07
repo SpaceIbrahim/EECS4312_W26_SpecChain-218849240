@@ -1,16 +1,224 @@
-
 {
   "tests": [
     {
-      "test_id": "T_auto_1",
+      "test_id": "T_manual_1",
       "requirement_id": "FR1",
-      "scenario": "Workout Logging Stability",
+      "scenario": "Sleep audio continues during idle device state",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Open the app and start a sleep audio session",
+        "Leave the device idle without interacting with the app",
+        "Observe playback while the session is in progress"
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "The sleep audio continues playing until the content ends or the user manually stops it."
+    },
+    {
+      "test_id": "T_manual_2",
+      "requirement_id": "FR1",
+      "scenario": "Sleep audio does not stop unexpectedly before content ends",
+      "steps": [
+        "Open the app and begin bedtime audio playback",
+        "Keep the app running in normal playback conditions",
+        "Monitor the session before the content reaches its end"
+      ],
+      "expected_result": "The session does not stop unexpectedly before the content ends unless the user stops it."
+    },
+    {
+      "test_id": "T_manual_3",
+      "requirement_id": "FR2",
+      "scenario": "Browse short stress relief sessions",
+      "steps": [
+        "Open the guided sessions section",
+        "Browse sessions intended for stress relief",
+        "Check the displayed durations of the available sessions"
+      ],
+      "expected_result": "The system provides stress relief guided sessions with durations of ten minutes or less."
+    },
+    {
+      "test_id": "T_manual_4",
+      "requirement_id": "FR2",
+      "scenario": "Select a short guided session",
+      "steps": [
+        "Open the app and navigate to guided stress relief content",
+        "Select one available short session",
+        "Review the displayed session length before starting"
+      ],
+      "expected_result": "The selected stress relief session shows a duration of ten minutes or less."
+    },
+    {
+      "test_id": "T_manual_5",
+      "requirement_id": "FR3",
+      "scenario": "Free content label is shown before playback",
+      "steps": [
+        "Open a content details page for a free item",
+        "Review the content access information",
+        "Check the status before starting playback"
+      ],
+      "expected_result": "The system clearly indicates that the content is free before playback starts."
+    },
+    {
+      "test_id": "T_manual_6",
+      "requirement_id": "FR3",
+      "scenario": "Paid or trial content label is shown before playback",
+      "steps": [
+        "Open a content details page for an item that is trial based or subscription only",
+        "Review the content access information",
+        "Check the status before starting playback"
+      ],
+      "expected_result": "The system clearly indicates whether the content is included in a trial or requires a paid subscription before playback starts."
+    },
+    {
+      "test_id": "T_manual_7",
+      "requirement_id": "FR4",
+      "scenario": "Subscription confirmation screen shows pricing details",
+      "steps": [
+        "Start the flow to activate a subscription",
+        "Proceed to the confirmation screen",
+        "Review the information presented before confirming"
+      ],
+      "expected_result": "The confirmation screen shows the price, billing frequency, trial duration if applicable, and renewal terms before confirmation."
+    },
+    {
+      "test_id": "T_manual_8",
+      "requirement_id": "FR4",
+      "scenario": "Free trial confirmation screen shows trial and renewal terms",
+      "steps": [
+        "Start the flow to activate a free trial",
+        "Proceed to the confirmation screen",
+        "Review the terms displayed before confirming"
+      ],
+      "expected_result": "The confirmation screen shows the trial duration, billing frequency after the trial, and renewal conditions before the user confirms."
+    },
+    {
+      "test_id": "T_manual_9",
+      "requirement_id": "FR5",
+      "scenario": "Cancellation option is visible for active subscription",
+      "steps": [
+        "Log in with an account that has an active subscription",
+        "Open the subscription management area",
+        "Review the available account actions"
+      ],
+      "expected_result": "A visible option to cancel the subscription is present in subscription management."
+    },
+    {
+      "test_id": "T_manual_10",
+      "requirement_id": "FR5",
+      "scenario": "Cancellation option is visible for active trial",
+      "steps": [
+        "Log in with an account that has an active free trial",
+        "Open the subscription management area",
+        "Review the available account actions"
+      ],
+      "expected_result": "A visible option to cancel the free trial is present in subscription management."
+    },
+    {
+      "test_id": "T_manual_11",
+      "requirement_id": "FR6",
+      "scenario": "Downloaded audio can be opened offline",
+      "steps": [
+        "Download an audio item while connected to the internet",
+        "Turn off internet access on the device",
+        "Open the downloaded content from the app"
+      ],
+      "expected_result": "The downloaded audio remains accessible when the device has no internet connection."
+    },
+    {
+      "test_id": "T_manual_12",
+      "requirement_id": "FR6",
+      "scenario": "Downloaded audio plays offline",
+      "steps": [
+        "Download an audio item while online",
+        "Disconnect the device from the internet",
+        "Open the downloaded item and press play"
+      ],
+      "expected_result": "The downloaded audio plays successfully without requiring an internet connection."
+    },
+    {
+      "test_id": "T_manual_13",
+      "requirement_id": "FR7",
+      "scenario": "Offline playback does not show connection error",
+      "steps": [
+        "Download an audio item for offline use",
+        "Turn off internet access",
+        "Start playback of the downloaded item"
+      ],
+      "expected_result": "The downloaded content plays offline without displaying a connection error."
+    },
+    {
+      "test_id": "T_manual_14",
+      "requirement_id": "FR7",
+      "scenario": "Offline playback continues without skipping or restart",
+      "steps": [
+        "Download an audio item for offline use",
+        "Disconnect the device from the internet",
+        "Play the downloaded item and monitor playback behavior"
+      ],
+      "expected_result": "The session continues offline without skipping or restarting unexpectedly."
+    },
+    {
+      "test_id": "T_manual_15",
+      "requirement_id": "FR8",
+      "scenario": "Search returns relevant meditation content",
+      "steps": [
+        "Open the app search feature",
+        "Search for meditation content",
+        "Review the returned search results"
+      ],
+      "expected_result": "The system returns relevant meditation results."
+    },
+    {
+      "test_id": "T_manual_16",
+      "requirement_id": "FR8",
+      "scenario": "Category navigation returns relevant sleep or sound content",
+      "steps": [
+        "Open the category navigation area",
+        "Browse the sleep or sound category",
+        "Review the content shown in that category"
+      ],
+      "expected_result": "The system returns relevant sleep or sound content for the selected category."
+    },
+    {
+      "test_id": "T_manual_17",
+      "requirement_id": "FR9",
+      "scenario": "Library shows dedicated history sections",
+      "steps": [
+        "Log in with an account that has completed and in progress content",
+        "Open the library or profile area",
+        "Review the available sections"
+      ],
+      "expected_result": "The system provides dedicated sections for completed and in progress content."
+    },
+    {
+      "test_id": "T_manual_18",
+      "requirement_id": "FR9",
+      "scenario": "Library shows downloaded and favourited sections",
+      "steps": [
+        "Log in with an account that has downloaded and favourited content",
+        "Open the library or profile area",
+        "Review the available sections"
+      ],
+      "expected_result": "The system provides dedicated sections for downloaded and favourited content."
+    },
+    {
+      "test_id": "T_manual_19",
+      "requirement_id": "FR10",
+      "scenario": "Sleep content category includes sleep stories and soundscapes",
+      "steps": [
+        "Open the app during a normal browsing session",
+        "Navigate to the sleep content area",
+        "Review the available types of sleep oriented content"
+      ],
+      "expected_result": "The system provides access to sleep stories and soundscapes for bedtime use."
+    },
+    {
+      "test_id": "T_manual_20",
+      "requirement_id": "FR10",
+      "scenario": "Sleep content category includes relaxing music",
+      "steps": [
+        "Open the app and browse sleep oriented audio content",
+        "Review the available content types",
+        "Check whether relaxing music is included"
+      ],
+      "expected_result": "The system provides access to relaxing music as sleep oriented bedtime content."
     }
   ]
 }
