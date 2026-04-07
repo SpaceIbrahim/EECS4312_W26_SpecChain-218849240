@@ -1,111 +1,111 @@
 # Requirement ID: FR_auto_1
-- Description: [The system shall provide a daily meditation session that can be completed within 10 minutes to help the Daily Calm Enthusiast start the day feeling refreshed.]
+- Description: [The system shall provide a user-friendly interface for the Satisfied User to easily access premium features.]
 
-- Source Persona: [Daily Calm Enthusiast]
+- Source Persona: [Satisfied User]
 - Traceability: [Derived from review group G1]
-- Acceptance Criteria:[Given the user has a busy schedule, When they open the app, Then they can access a daily meditation session that lasts 10 minutes or less.]
+- Acceptance Criteria:[Given the Satisfied User has a financial constraint, When they navigate to the premium features section, Then they can easily find affordable subscription options.]
 
 # Requirement ID: FR_auto_2
-- Description: [The system shall offer a free trial period for premium features to allow the Daily Calm Enthusiast to experience the full benefits of the app.]
+- Description: [The system shall offer flexible subscription plans for the Satisfied User to manage their stress and anxiety.]
 
-- Source Persona: [Daily Calm Enthusiast]
+- Source Persona: [Satisfied User]
 - Traceability: [Derived from review group G1]
-- Acceptance Criteria:[Given the user is a busy professional, When they sign up for the app, Then they can access a free trial period for premium features.]
+- Acceptance Criteria:[Given the Satisfied User has a goal to manage stress and anxiety, When they access the subscription plans, Then they can choose a plan that fits their financial constraints.]
 
 # Requirement ID: FR_auto_3
-- Description: [The system shall provide a clear and transparent subscription model that allows the Satisfied Calm User to easily understand the costs and benefits of their subscription.]
+- Description: [The system shall provide a simple and efficient cancellation process for the Frustrated Subscriber.]
 
-- Source Persona: [Satisfied Calm User]
-- Traceability: [Derived from review group G2]
-- Acceptance Criteria:[Given the user is a meditation enthusiast, When they view their account settings, Then they can easily understand the costs and benefits of their subscription.]
+- Source Persona: [Frustrated Subscriber]
+- Traceability: [Derived from review group G3]
+- Acceptance Criteria:[Given the Frustrated Subscriber wants to cancel their subscription, When they access their account settings, Then they can easily cancel their subscription in one step.]
 
 # Requirement ID: FR_auto_4
-- Description: [The system shall offer a loyalty program that rewards the Satisfied Calm User for their continued use of the app.]
+- Description: [The system shall send a confirmation email to the Frustrated Subscriber after successful cancellation.]
 
-- Source Persona: [Satisfied Calm User]
-- Traceability: [Derived from review group G2]
-- Acceptance Criteria:[Given the user has a regular meditation practice, When they log in to the app, Then they can access exclusive content or discounts based on their loyalty.]
+- Source Persona: [Frustrated Subscriber]
+- Traceability: [Derived from review group G3]
+- Acceptance Criteria:[Given the Frustrated Subscriber has canceled their subscription, When the system processes the cancellation, Then they receive a confirmation email within 5 minutes.]
 
 # Requirement ID: FR_auto_5
-- Description: [The system shall provide a user-friendly interface that allows the Calmness Seeker to easily navigate and find relevant content.]
+- Description: [The system shall offer a variety of relaxing content for the Relaxing User to manage stress and anxiety.]
 
-- Source Persona: [Calmness Seeker]
-- Traceability: [Derived from review group G3]
-- Acceptance Criteria:[Given the user has high stress levels, When they open the app, Then they can easily find and access relevant meditation sessions or sleep stories.]
+- Source Persona: [Relaxing User]
+- Traceability: [Derived from review group G2]
+- Acceptance Criteria:[Given the Relaxing User seeks relaxation and stress relief, When they access the app's content library, Then they can find at least 10 different types of relaxing content.]
 
 # Requirement ID: FR_auto_6
-- Description: [The system shall offer a technical support feature that allows the Calmness Seeker to report and resolve technical issues quickly.]
+- Description: [The system shall provide a sleep-focused meditation program for the Insomniac Seeker to improve sleep quality.]
 
-- Source Persona: [Calmness Seeker]
-- Traceability: [Derived from review group G3]
-- Acceptance Criteria:[Given the user experiences technical issues, When they report the issue, Then they can receive a prompt response or resolution.]
+- Source Persona: [Insomniac Seeker]
+- Traceability: [Derived from review group G4]
+- Acceptance Criteria:[Given the Insomniac Seeker struggles with sleep, When they access the app's meditation programs, Then they can find a sleep-focused program with at least 5 sessions.]
 
 # Requirement ID: FR_auto_7
-- Description: [The system shall provide a wide variety of sleep stories that cater to different tastes and preferences of the Sleep Improver.]
+- Description: [The system shall offer a free trial for the Frustrated User to test the app's features.]
 
-- Source Persona: [Sleep Improver]
-- Traceability: [Derived from review group G4]
-- Acceptance Criteria:[Given the user has sleep disturbances, When they browse the sleep stories, Then they can find a story that matches their interests or preferences.]
+- Source Persona: [Frustrated User]
+- Traceability: [Derived from review group G5]
+- Acceptance Criteria:[Given the Frustrated User is hesitant to pay for a subscription, When they access the app's pricing page, Then they can start a free trial without providing payment information.]
 
 # Requirement ID: FR_auto_8
-- Description: [The system shall allow the Sleep Improver to track their sleep patterns and progress over time.]
+- Description: [The system shall provide a clear and transparent pricing page for the Frustrated User.]
 
-- Source Persona: [Sleep Improver]
-- Traceability: [Derived from review group G4]
-- Acceptance Criteria:[Given the user wants to improve their sleep quality, When they view their sleep data, Then they can see their progress and trends over time.]
+- Source Persona: [Frustrated User]
+- Traceability: [Derived from review group G5]
+- Acceptance Criteria:[Given the Frustrated User wants to understand the costs, When they access the pricing page, Then they can easily find a breakdown of the costs and features.]
 
 # Requirement ID: FR_auto_9
-- Description: [The system shall provide a clear and transparent paywall that allows the Frustrated Free User to understand what features are available for free and what requires a subscription.]
+- Description: [The system shall offer more free features for the Frustrated Listener to relax and sleep.]
 
-- Source Persona: [Frustrated Free User]
-- Traceability: [Derived from review group G5]
-- Acceptance Criteria:[Given the user is frustrated with the limited free features, When they view the app's features, Then they can easily understand what features are available for free and what requires a subscription.]
+- Source Persona: [Frustrated Listener]
+- Traceability: [Derived from review group G6]
+- Acceptance Criteria:[Given the Frustrated Listener uses the free version, When they access the app's features, Then they can access at least 5 free soundscapes without ads.]
 
 # Requirement ID: FR_auto_10
-- Description: [The system shall offer a flexible pricing plan that allows the Frustrated Free User to access more features and content without committing to a full subscription.]
+- Description: [The system shall provide a clear indication of free and paid features for the Frustrated Listener.]
 
-- Source Persona: [Frustrated Free User]
-- Traceability: [Derived from review group G5]
-- Acceptance Criteria:[Given the user has a limited budget, When they view the pricing plans, Then they can choose a plan that fits their needs and budget.]
+- Source Persona: [Frustrated Listener]
+- Traceability: [Derived from review group G6]
+- Acceptance Criteria:[Given the Frustrated Listener uses the free version, When they access the app's features, Then they can easily distinguish between free and paid features.]
 
 # Requirement ID: FR_auto_11
-- Description: [The system shall provide a simple and easy cancellation process that allows the Subscription Skeptic to easily cancel their subscription.]
+- Description: [The system shall offer a free version with sufficient features for the Frugal User.]
 
-- Source Persona: [Subscription Skeptic]
-- Traceability: [Derived from review group G6]
-- Acceptance Criteria:[Given the user wants to cancel their subscription, When they access the account settings, Then they can easily cancel their subscription in a few steps.]
+- Source Persona: [Frugal User]
+- Traceability: [Derived from review group G7]
+- Acceptance Criteria:[Given the Frugal User seeks free resources, When they access the app, Then they can use at least 5 free features without ads or subscription.]
 
 # Requirement ID: FR_auto_12
-- Description: [The system shall offer a clear and transparent explanation of the benefits and features of the subscription model to help the Subscription Skeptic make an informed decision.]
+- Description: [The system shall provide a comparison of features between free and paid versions for the Frugal User.]
 
-- Source Persona: [Subscription Skeptic]
-- Traceability: [Derived from review group G6]
-- Acceptance Criteria:[Given the user is skeptical of the subscription model, When they view the subscription details, Then they can understand the benefits and features of the subscription.]
+- Source Persona: [Frugal User]
+- Traceability: [Derived from review group G7]
+- Acceptance Criteria:[Given the Frugal User compares costs, When they access the pricing page, Then they can easily compare features between free and paid versions.]
 
 # Requirement ID: FR_auto_13
-- Description: [The system shall provide a stable and reliable app experience that minimizes technical issues for the Frustrated Technical User.]
+- Description: [The system shall provide a daily self-care program for the Daily Calm User.]
 
-- Source Persona: [Frustrated Technical User]
-- Traceability: [Derived from review group G7]
-- Acceptance Criteria:[Given the user experiences technical issues, When they use the app, Then they can enjoy a stable and reliable app experience.]
+- Source Persona: [Daily Calm User]
+- Traceability: [Derived from review group G8]
+- Acceptance Criteria:[Given the Daily Calm User seeks daily self-care, When they access the app, Then they can find a daily meditation program with at least 5 sessions.]
 
 # Requirement ID: FR_auto_14
-- Description: [The system shall offer a feedback mechanism that allows the Frustrated Technical User to report technical issues and provide suggestions for improvement.]
+- Description: [The system shall offer a personalized experience for the Daily Calm User.]
 
-- Source Persona: [Frustrated Technical User]
-- Traceability: [Derived from review group G7]
-- Acceptance Criteria:[Given the user experiences technical issues, When they report the issue, Then they can receive a prompt response or resolution.]
+- Source Persona: [Daily Calm User]
+- Traceability: [Derived from review group G8]
+- Acceptance Criteria:[Given the Daily Calm User uses the app daily, When they access the app, Then they can find personalized meditation recommendations.]
 
 # Requirement ID: FR_auto_15
-- Description: [The system shall provide a simple and easy cancellation process that allows the Cancellation Struggle to easily cancel their subscription.]
+- Description: [The system shall provide a user-friendly interface for the Relaxing User to navigate and find relaxing content.]
 
-- Source Persona: [Cancellation Struggle]
-- Traceability: [Derived from review group G8]
-- Acceptance Criteria:[Given the user wants to cancel their subscription, When they access the account settings, Then they can easily cancel their subscription in a few steps.]
+- Source Persona: [Relaxing User]
+- Traceability: [Derived from review group G2]
+- Acceptance Criteria:[Given the Relaxing User values ease of use, When they access the app, Then they can easily find relaxing content within 2 clicks.]
 
 # Requirement ID: FR_auto_16
-- Description: [The system shall offer a clear and transparent explanation of the cancellation process to help the Cancellation Struggle understand the steps involved.]
+- Description: [The system shall offer a sleep story feature for the Insomniac Seeker to improve sleep quality.]
 
-- Source Persona: [Cancellation Struggle]
-- Traceability: [Derived from review group G8]
-- Acceptance Criteria:[Given the user struggles with cancellation, When they view the cancellation details, Then they can understand the steps involved in cancelling their subscription.]
+- Source Persona: [Insomniac Seeker]
+- Traceability: [Derived from review group G4]
+- Acceptance Criteria:[Given the Insomniac Seeker loves sleep stories, When they access the app's sleep features, Then they can find at least 10 different sleep stories.]

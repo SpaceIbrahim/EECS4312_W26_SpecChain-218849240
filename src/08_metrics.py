@@ -5,8 +5,7 @@ import re
 from typing import Any
 
 
-# Config
-
+# file paths for each pipeline
 DEFAULT_REVIEWS_FILE = "data/reviews_clean.jsonl"
 
 PIPELINE_CONFIGS = {
@@ -33,6 +32,14 @@ PIPELINE_CONFIGS = {
     },
 }
 
+# the summary json uses "automated" instead of "auto"
+SUMMARY_KEY_MAP = {
+    "manual": "manual",
+    "auto": "automated",
+    "hybrid": "hybrid",
+}
+
+# words that make a requirement vague/untestable
 AMBIGUOUS_TERMS = {
     "fast",
     "easy",
@@ -55,9 +62,10 @@ AMBIGUOUS_TERMS = {
     "friendly",
 }
 
+SUMMARY_OUTPUT_FILE = "metrics/metrics_summary.json"
 
-# File Helpers
 
+# helper to create folders if they dont exist before saving
 def ensure_parent_dir(path: str) -> None:
     parent = os.path.dirname(path)
     if parent:
@@ -85,27 +93,61 @@ def load_reviews_jsonl(path: str) -> list[dict]:
     return reviews
 
 
-# Spec Parsing
-
-def parse_spec_markdown(markdown_text: str) -> list[dict]:
+# parse the spec markdown file and pull out each requirement block
+def parse_spec_markdown(markdown_text: str, source_path: str = "") -> list[dict]:
+    # try matching fields wrapped in square brackets first
     pattern = re.compile(
-        r"# Requirement ID:\s*(?P<requirement_id>[^\n]+)\n"
-        r"- Description:\s*\[(?P<description>.*?)\]\s*\n+"
-        r"- Source Persona:\s*\[(?P<source_persona>.*?)\]\s*\n"
-        r"- Traceability:\s*\[(?P<traceability>.*?)\]\s*\n"
-        r"- Acceptance Criteria:\s*\[(?P<acceptance_criteria>.*?)\]",
-        re.DOTALL
+        r"#+\s*Requirement\s+ID:\s*(?P<requirement_id>[^\n]+)\n"
+        r"[\s\S]*?-\s*Description:\s*\[(?P<description>.*?)\]\s*\n+"
+        r"[\s\S]*?-\s*Source\s*Persona:\s*\[(?P<source_persona>.*?)\]\s*\n"
+        r"[\s\S]*?-\s*Traceability:\s*\[(?P<traceability>.*?)\]\s*\n"
+        r"[\s\S]*?-\s*Acceptance\s*Criteria:\s*\[(?P<acceptance_criteria>.*?)\]",
+        re.DOTALL | re.IGNORECASE,
+    )
+
+    # fallback in case the spec doesnt use brackets
+    fallback_pattern = re.compile(
+        r"#+\s*Requirement\s+ID:\s*(?P<requirement_id>[^\n]+)\n"
+        r"[\s\S]*?-\s*Description:\s*(?P<description>[^\n\[]+)\n"
+        r"[\s\S]*?-\s*Source\s*Persona:\s*(?P<source_persona>[^\n\[]+)\n"
+        r"[\s\S]*?-\s*Traceability:\s*(?P<traceability>[^\n\[]+)\n"
+        r"[\s\S]*?-\s*Acceptance\s*Criteria:\s*(?P<acceptance_criteria>[^\n\[]+)",
+        re.DOTALL | re.IGNORECASE,
     )
 
     requirements = []
     for match in pattern.finditer(markdown_text):
-        requirements.append({
-            "requirement_id": match.group("requirement_id").strip(),
-            "description": " ".join(match.group("description").split()),
-            "source_persona": " ".join(match.group("source_persona").split()),
-            "traceability": " ".join(match.group("traceability").split()),
-            "acceptance_criteria": " ".join(match.group("acceptance_criteria").split()),
-        })
+        requirements.append(
+            {
+                "requirement_id": match.group("requirement_id").strip(),
+                "description": " ".join(match.group("description").split()),
+                "source_persona": " ".join(match.group("source_persona").split()),
+                "traceability": " ".join(match.group("traceability").split()),
+                "acceptance_criteria": " ".join(
+                    match.group("acceptance_criteria").split()
+                ),
+            }
+        )
+
+    # if the first pattern found nothing, try the fallback
+    if not requirements:
+        for match in fallback_pattern.finditer(markdown_text):
+            requirements.append(
+                {
+                    "requirement_id": match.group("requirement_id").strip(),
+                    "description": " ".join(match.group("description").split()),
+                    "source_persona": " ".join(match.group("source_persona").split()),
+                    "traceability": " ".join(match.group("traceability").split()),
+                    "acceptance_criteria": " ".join(
+                        match.group("acceptance_criteria").split()
+                    ),
+                }
+            )
+
+    if not requirements:
+        print(f"  [WARNING] could not parse any requirements from '{source_path}'")
+        print(f"  make sure headings say '# Requirement ID:' and fields use")
+        print(f"  '- Description:', '- Source Persona:', '- Traceability:', '- Acceptance Criteria:'")
 
     return requirements
 
@@ -113,74 +155,93 @@ def parse_spec_markdown(markdown_text: str) -> list[dict]:
 def load_requirements(path: str) -> list[dict]:
     with open(path, "r", encoding="utf-8") as f:
         text = f.read()
-    return parse_spec_markdown(text)
+    return parse_spec_markdown(text, source_path=path)
 
-
-# Metric Helpers
 
 def round_ratio(value: float) -> float:
     return round(value, 2)
 
 
-def collect_review_indexes_from_groups(groups: list[dict]) -> set[int]:
+# the groups/personas files use different key names depending on the pipeline
+# so we check a few common ones
+GROUP_INDEX_FIELDS = [
+    "review_indexes",
+    "review_indices",
+    "review_ids",
+    "reviews",
+    "review_index",
+]
+
+PERSONA_REVIEW_FIELDS = [
+    "evidence_reviews",
+    "review_indexes",
+    "review_indices",
+    "review_ids",
+    "reviews",
+]
+
+
+def _get_review_list(obj: dict, field_names: list[str]) -> list:
+    # return the first field that actually has data
+    for field in field_names:
+        value = obj.get(field)
+        if isinstance(value, list) and value:
+            return value
+    return []
+
+
+def collect_review_indexes_from_groups(groups: list[dict]) -> set[str]:
     covered = set()
     for group in groups:
-        for rid in group.get("review_indexes", []):
-            try:
-                covered.add(int(rid))
-            except Exception:
-                continue
+        for rid in _get_review_list(group, GROUP_INDEX_FIELDS):
+            covered.add(str(rid))
+    if not covered and groups:
+        found_keys = {k for g in groups for k in g.keys()}
+        print(f"  [WARNING] no review IDs found in groups. keys seen: {found_keys}")
     return covered
 
 
-def collect_review_indexes_from_personas(personas: list[dict]) -> set[int]:
+def collect_review_indexes_from_personas(personas: list[dict]) -> set[str]:
     covered = set()
     for persona in personas:
-        for rid in persona.get("evidence_reviews", []):
-            try:
-                covered.add(int(rid))
-            except Exception:
-                continue
+        for rid in _get_review_list(persona, PERSONA_REVIEW_FIELDS):
+            covered.add(str(rid))
+    if not covered and personas:
+        found_keys = {k for p in personas for k in p.keys()}
+        print(f"  [WARNING] no review IDs found in personas. keys seen: {found_keys}")
     return covered
 
 
 def requirement_is_traceable(req: dict) -> bool:
+    # a requirement is traceable if it has both a persona and a traceability field
     has_persona = bool(req.get("source_persona", "").strip())
     has_traceability = bool(req.get("traceability", "").strip())
     return has_persona and has_traceability
 
 
 def requirement_is_ambiguous(req: dict) -> bool:
+    # combine description and acceptance criteria then check for vague words
     text = f"{req.get('description', '')} {req.get('acceptance_criteria', '')}".lower()
     normalized = re.sub(r"[^a-z0-9\s\-]", " ", text)
     normalized = re.sub(r"\s+", " ", normalized).strip()
-
     for term in AMBIGUOUS_TERMS:
         if term in normalized:
             return True
     return False
 
 
-def compute_traceability_links(personas: list[dict], requirements: list[dict], tests: list[dict]) -> int:
-    persona_to_group_links = 0
-    for persona in personas:
-        if persona.get("derived_from_group"):
-            persona_to_group_links += 1
-
-    req_to_persona_links = 0
-    for req in requirements:
-        if requirement_is_traceable(req):
-            req_to_persona_links += 1
-
-    test_to_requirement_links = 0
-    for test in tests:
-        if str(test.get("requirement_id", "")).strip():
-            test_to_requirement_links += 1
-
-    return persona_to_group_links + req_to_persona_links + test_to_requirement_links
+def compute_traceability_links(
+    personas: list[dict], requirements: list[dict], tests: list[dict]
+) -> int:
+    # count links across all three layers: group->persona, persona->req, req->test
+    persona_to_group = sum(1 for p in personas if p.get("derived_from_group"))
+    req_to_persona = sum(1 for req in requirements if requirement_is_traceable(req))
+    test_to_req = sum(1 for t in tests if str(t.get("requirement_id", "")).strip())
+    return persona_to_group + req_to_persona + test_to_req
 
 
 def compute_metrics_for_pipeline(
+    pipeline_name: str,
     reviews_file: str,
     groups_file: str,
     personas_file: str,
@@ -202,9 +263,7 @@ def compute_metrics_for_pipeline(
     requirements_count = len(requirements)
     tests_count = len(tests)
 
-    # Review coverage:
-    # Prefer group coverage because groups represent the actual partition of the dataset.
-    # If groups are missing, fall back to persona evidence_reviews.
+    # prefer group-level coverage, fall back to persona evidence if groups are empty
     covered_reviews = collect_review_indexes_from_groups(groups)
     if not covered_reviews:
         covered_reviews = collect_review_indexes_from_personas(personas)
@@ -213,35 +272,31 @@ def compute_metrics_for_pipeline(
         round_ratio(len(covered_reviews) / dataset_size) if dataset_size > 0 else 0.0
     )
 
-    traceable_requirements = sum(1 for req in requirements if requirement_is_traceable(req))
+    traceable_count = sum(1 for req in requirements if requirement_is_traceable(req))
     traceability_ratio = (
-        round_ratio(traceable_requirements / requirements_count)
-        if requirements_count > 0 else 0.0
+        round_ratio(traceable_count / requirements_count) if requirements_count > 0 else 0.0
     )
 
-    tested_requirement_ids = {
-        str(test.get("requirement_id", "")).strip()
-        for test in tests
-        if str(test.get("requirement_id", "")).strip()
+    # get the set of requirement IDs that have at least one test
+    tested_ids = {
+        str(t.get("requirement_id", "")).strip()
+        for t in tests
+        if str(t.get("requirement_id", "")).strip()
     }
-    testable_requirements = sum(
-        1 for req in requirements
-        if req["requirement_id"] in tested_requirement_ids
-    )
+    testable_count = sum(1 for req in requirements if req["requirement_id"] in tested_ids)
     testability_rate = (
-        round_ratio(testable_requirements / requirements_count)
-        if requirements_count > 0 else 0.0
+        round_ratio(testable_count / requirements_count) if requirements_count > 0 else 0.0
     )
 
-    ambiguous_requirements = sum(1 for req in requirements if requirement_is_ambiguous(req))
+    ambiguous_count = sum(1 for req in requirements if requirement_is_ambiguous(req))
     ambiguity_ratio = (
-        round_ratio(ambiguous_requirements / requirements_count)
-        if requirements_count > 0 else 0.0
+        round_ratio(ambiguous_count / requirements_count) if requirements_count > 0 else 0.0
     )
 
     traceability_links = compute_traceability_links(personas, requirements, tests)
 
     return {
+        "pipeline": pipeline_name,
         "dataset_size": dataset_size,
         "persona_count": persona_count,
         "requirements_count": requirements_count,
@@ -254,35 +309,31 @@ def compute_metrics_for_pipeline(
     }
 
 
-# Summary Metrics
-
-def build_metrics_summary() -> dict:
+def build_metrics_summary(computed: dict[str, dict]) -> dict:
+    # build the summary json, renaming "auto" to "automated" to match the expected format
+    # also strip the "pipeline" field since it's redundant in the summary
     summary = {}
+    for pipeline_name, metrics in computed.items():
+        summary_key = SUMMARY_KEY_MAP.get(pipeline_name, pipeline_name)
+        entry = {k: v for k, v in metrics.items() if k != "pipeline"}
+        summary[summary_key] = entry
+    return summary
 
-    for pipeline_name, cfg in PIPELINE_CONFIGS.items():
-        output_file = cfg["output_file"]
-        if os.path.exists(output_file):
-            summary[pipeline_name] = load_json(output_file)
-
-    return {"pipelines": summary}
-
-
-# CLI
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Compute SpecChain metrics for manual, auto, or hybrid pipelines."
+        description="Compute metrics for the manual, auto, and hybrid pipelines."
     )
     parser.add_argument(
         "--pipeline",
         choices=["manual", "auto", "hybrid", "all"],
-        default="auto",
-        help="Which pipeline metrics to compute."
+        default="all",
+        help="which pipeline to compute metrics for (default: all)",
     )
     parser.add_argument(
         "--reviews-file",
         default=DEFAULT_REVIEWS_FILE,
-        help="Path to cleaned reviews jsonl file."
+        help="path to the cleaned reviews jsonl file",
     )
     return parser.parse_args()
 
@@ -291,15 +342,17 @@ def main() -> None:
     args = parse_args()
 
     pipelines = (
-        ["manual", "auto", "hybrid"]
-        if args.pipeline == "all"
-        else [args.pipeline]
+        ["manual", "auto", "hybrid"] if args.pipeline == "all" else [args.pipeline]
     )
+
+    computed: dict[str, dict] = {}
 
     for pipeline_name in pipelines:
         cfg = PIPELINE_CONFIGS[pipeline_name]
 
+        print(f"\ncomputing metrics for: {pipeline_name}")
         metrics = compute_metrics_for_pipeline(
+            pipeline_name=pipeline_name,
             reviews_file=args.reviews_file,
             groups_file=cfg["groups_file"],
             personas_file=cfg["personas_file"],
@@ -308,13 +361,17 @@ def main() -> None:
         )
 
         save_json(cfg["output_file"], metrics)
-        print(f"Saved {pipeline_name} metrics -> {cfg['output_file']}")
+        print(f"saved -> {cfg['output_file']}")
         print(json.dumps(metrics, indent=2, ensure_ascii=False))
 
+        computed[pipeline_name] = metrics
+
+    # write the combined summary file when all three are computed
     if args.pipeline == "all":
-        summary = build_metrics_summary()
-        save_json("metrics/metrics_summary.json", summary)
-        print("Saved summary metrics -> metrics/metrics_summary.json")
+        summary = build_metrics_summary(computed)
+        save_json(SUMMARY_OUTPUT_FILE, summary)
+        print(f"\nSaved summary -> {SUMMARY_OUTPUT_FILE}")
+        print(json.dumps(summary, indent=2, ensure_ascii=False))
 
 
 if __name__ == "__main__":

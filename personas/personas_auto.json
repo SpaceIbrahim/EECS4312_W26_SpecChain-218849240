@@ -2,199 +2,218 @@
   "personas": [
     {
       "id": "P1",
-      "name": "Daily Calm Enthusiast",
-      "description": "A busy professional who uses Calm daily to unwind and prepare for work. They appreciate the app's ability to help them relax and feel refreshed.",
+      "name": "Satisfied User",
+      "description": "A user who finds the Calm app helpful for stress relief and relaxation, but may face financial constraints that limit their ability to afford a subscription.",
       "derived_from_group": "G1",
       "goals": [
-        "Start the day feeling refreshed",
-        "Manage stress and anxiety"
+        "To manage stress and anxiety",
+        "To relax and sleep better"
       ],
       "pain_points": [
-        "Limited free features"
+        "Limited access to premium features",
+        "Frustrating app changes"
       ],
       "context": [
-        "Busy schedule",
-        "High stress levels"
+        "Using the app for stress relief and relaxation",
+        "Considering affordability when choosing a meditation app"
       ],
       "constraints": [
-        "Limited time for self-care"
+        "Financial constraints that limit subscription affordability"
       ],
       "evidence_reviews": [
-        "rev_7",
-        "rev_20",
-        "rev_70"
+        "rev_58"
       ]
     },
     {
       "id": "P2",
-      "name": "Satisfied Calm User",
-      "description": "A meditation enthusiast who loves the Calm app and uses it daily. They appreciate the app's content and features.",
+      "name": "Relaxing User",
+      "description": "A user seeking relaxation and stress relief through meditation and calming content, valuing ease of use and effective tools for managing mental wellness.",
       "derived_from_group": "G2",
       "goals": [
-        "Improve meditation practice",
-        "Reduce stress and anxiety"
+        "find a calming and relaxing experience",
+        "manage stress and anxiety",
+        "improve sleep quality"
       ],
       "pain_points": [
-        "Limited free features"
+        "difficulty finding effective meditation tools",
+        "struggling to relax and unwind"
       ],
       "context": [
-        "Regular meditation practice",
-        "High stress levels"
+        "using the app for personal relaxation and stress relief",
+        "valuing user-friendly interface and high-quality content"
       ],
       "constraints": [
-        "Limited budget for subscriptions"
+        "limited time for meditation and relaxation",
+        "seeks convenient and accessible tools"
       ],
       "evidence_reviews": [
-        "rev_1",
-        "rev_15",
-        "rev_30"
+        "rev_5",
+        "rev_24",
+        "rev_54"
       ]
     },
     {
       "id": "P3",
-      "name": "Calmness Seeker",
-      "description": "An individual seeking calmness and relaxation through meditation and sleep stories. They use Calm to manage stress and anxiety.",
+      "name": "Frustrated Subscriber",
+      "description": "A person struggling to cancel their Calm subscription, frustrated by the difficulty of the process and the continued charges despite their cancellation attempts.",
       "derived_from_group": "G3",
       "goals": [
-        "Improve sleep quality",
-        "Reduce stress and anxiety"
+        "Easily cancel subscription",
+        "Avoid unexpected charges"
       ],
       "pain_points": [
-        "Technical issues with the app"
+        "Difficulty canceling subscription",
+        "Continued charges after cancellation attempts"
       ],
       "context": [
-        "High stress levels",
-        "Sleep disturbances"
+        "Recently subscribed to Calm",
+        "Trying to manage finances"
       ],
       "constraints": [
-        "Limited technical expertise"
+        "Limited technical expertise",
+        "Time constraints"
       ],
       "evidence_reviews": [
-        "rev_4",
-        "rev_18",
-        "rev_40"
+        "rev_12"
       ]
     },
     {
       "id": "P4",
-      "name": "Sleep Improver",
-      "description": "An individual struggling with sleep issues who uses Calm's sleep stories to improve sleep quality. They appreciate the app's ability to help them relax and fall asleep.",
+      "name": "Insomniac Seeker",
+      "description": "A person who struggles with sleep and seeks assistance from the Calm app to relax and fall asleep, valuing its help and loving its sleep stories.",
       "derived_from_group": "G4",
       "goals": [
-        "Improve sleep quality",
-        "Wake up feeling refreshed"
+        "Fall asleep quickly",
+        "Relax and destress"
       ],
       "pain_points": [
-        "Limited free sleep stories"
+        "Difficulty sleeping",
+        "Trouble relaxing"
       ],
       "context": [
-        "Sleep disturbances",
-        "High stress levels"
+        "At bedtime",
+        "When feeling stressed"
       ],
       "constraints": [
-        "Limited budget for subscriptions"
+        "Limited time for sleep",
+        "Easily distracted"
       ],
       "evidence_reviews": [
-        "rev_2",
-        "rev_16",
-        "rev_19"
+        "rev_8",
+        "rev_22",
+        "rev_25"
       ]
     },
     {
       "id": "P5",
-      "name": "Frustrated Free User",
-      "description": "A user frustrated with the limited features available for free. They want to access more content but are hesitant to pay for a subscription.",
+      "name": "Frustrated User",
+      "description": "A user who is frustrated with the paid subscription model of the Calm app, feeling that the app's features are locked behind a paywall and that the free trial is not sufficient to experience the full benefits of the app.",
       "derived_from_group": "G5",
       "goals": [
-        "Access more features and content"
+        "to access free features",
+        "to use the app without paying"
       ],
       "pain_points": [
-        "Limited free features",
-        "Paywall"
+        "frustration with locked features",
+        "dislike of subscription model",
+        "feeling misled by free trial"
       ],
       "context": [
-        "Limited budget",
-        "Frustration with app's monetization model"
+        "using the app daily",
+        "looking for free resources",
+        "sensitive to charges"
       ],
       "constraints": [
-        "Limited financial resources"
+        "limited budget",
+        "sensitive to being charged without consent"
       ],
       "evidence_reviews": [
-        "rev_5",
-        "rev_8",
-        "rev_17"
+        "rev_9",
+        "rev_29",
+        "rev_32",
+        "rev_37"
       ]
     },
     {
       "id": "P6",
-      "name": "Subscription Skeptic",
-      "description": "A user skeptical of the app's subscription model. They want to access features without paying but feel forced to subscribe.",
+      "name": "Frustrated Listener",
+      "description": "A person who uses the Calm app for relaxation and sleep but is frustrated with the limited free features and soundscapes, often feeling interrupted by ads and restricted by the free version's limitations.",
       "derived_from_group": "G6",
       "goals": [
-        "Access features without paying"
+        "Listen to soundscapes and relaxing music",
+        "Use the app for sleep and meditation"
       ],
       "pain_points": [
-        "Perceived unfairness of subscription model"
+        "Limited free features",
+        "Interrupted by ads",
+        "Not enough free soundscapes"
       ],
       "context": [
-        "Frustration with app's monetization model",
-        "Limited budget"
+        "Using the app for relaxation and sleep",
+        "Aware of the free version's limitations"
       ],
       "constraints": [
-        "Limited financial resources"
+        "Cannot afford to pay for a subscription",
+        "Needs to use the free version"
       ],
       "evidence_reviews": [
-        "rev_3",
+        "rev_6",
+        "rev_11",
         "rev_14",
         "rev_23"
       ]
     },
     {
       "id": "P7",
-      "name": "Frustrated Technical User",
-      "description": "A user frustrated with technical issues with the app. They experience glitches and crashes that hinder their experience.",
+      "name": "Frugal User",
+      "description": "A budget-conscious individual who is hesitant to pay for app subscriptions and features, seeking free alternatives and often perceiving paid services as overpriced.",
       "derived_from_group": "G7",
       "goals": [
-        "Smooth and reliable app experience"
+        "Use free resources",
+        "Avoid unnecessary expenses"
       ],
       "pain_points": [
-        "Technical issues with the app"
+        "Perceived high cost of subscriptions",
+        "Limited free features"
       ],
       "context": [
-        "Frustration with app's performance",
-        "High expectations for app quality"
+        "Exploring free options",
+        "Comparing costs before committing"
       ],
       "constraints": [
-        "Limited technical expertise"
+        "Limited budget",
+        "Skepticism towards paid services"
       ],
       "evidence_reviews": [
-        "rev_31",
-        "rev_68",
-        "rev_76"
+        "rev_2",
+        "rev_20",
+        "rev_35"
       ]
     },
     {
       "id": "P8",
-      "name": "Cancellation Struggle",
-      "description": "A user struggling to cancel their subscription. They experience difficulties with the cancellation process and feel frustrated.",
+      "name": "Daily Calm User",
+      "description": "A person who uses Calm daily to feel refreshed and grounded, seeking a positive mindset and self-care.",
       "derived_from_group": "G8",
       "goals": [
-        "Easily cancel subscription"
+        "start the day feeling refreshed and grounded",
+        "use Calm for daily self-care"
       ],
       "pain_points": [
-        "Difficulties with cancellation process"
+        "difficulty navigating the app initially"
       ],
       "context": [
-        "Frustration with app's customer support",
-        "Limited time for customer support"
+        "using Calm daily",
+        "seeking a positive mindset"
       ],
       "constraints": [
-        "Limited time for self-advocacy"
+        "limited time for self-care"
       ],
       "evidence_reviews": [
-        "rev_6",
-        "rev_11",
-        "rev_21"
+        "rev_1",
+        "rev_13",
+        "rev_26",
+        "rev_76"
       ]
     }
   ]

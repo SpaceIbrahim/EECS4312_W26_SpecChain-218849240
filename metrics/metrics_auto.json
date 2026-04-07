@@ -1,6 +1,6 @@
 {
   "pipeline": "auto",
-  "dataset_size": 3930,
+  "dataset_size": 3931,
   "persona_count": 8,
   "requirements_count": 16,
   "tests_count": 16,
@@ -8,5 +8,5 @@
   "review_coverage_ratio": 1.0,
   "traceability_ratio": 1.0,
   "testability_rate": 1.0,
-  "ambiguity_ratio": 0.12
+  "ambiguity_ratio": 0.38
 }

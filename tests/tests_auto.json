@@ -3,178 +3,178 @@
     {
       "test_id": "T_auto_1",
       "requirement_id": "FR_auto_1",
-      "scenario": "Daily meditation session access",
+      "scenario": "Access premium features",
       "steps": [
-        "Open the Calm app",
-        "Navigate to the meditation sessions",
-        "Select the daily meditation session"
+        "Launch the app",
+        "Navigate to premium features section",
+        "Verify affordable subscription options are visible"
       ],
-      "expected_result": "The daily meditation session lasts 10 minutes or less."
+      "expected_result": "The user can easily find affordable subscription options."
     },
     {
       "test_id": "T_auto_2",
       "requirement_id": "FR_auto_2",
-      "scenario": "Free trial period access",
+      "scenario": "Choose a subscription plan",
       "steps": [
-        "Sign up for the Calm app",
-        "Navigate to the premium features",
-        "Select the free trial period"
+        "Access subscription plans",
+        "Select a plan that fits financial constraints",
+        "Verify plan details are displayed"
       ],
-      "expected_result": "The user can access a free trial period for premium features."
+      "expected_result": "The user can choose a plan that fits their financial constraints."
     },
     {
       "test_id": "T_auto_3",
       "requirement_id": "FR_auto_3",
-      "scenario": "Subscription model clarity",
+      "scenario": "Cancel subscription",
       "steps": [
-        "Log in to the Calm app",
-        "Navigate to account settings",
-        "View subscription details"
+        "Access account settings",
+        "Cancel subscription",
+        "Verify cancellation is confirmed"
       ],
-      "expected_result": "The user can easily understand the costs and benefits of their subscription."
+      "expected_result": "The user can easily cancel their subscription in one step."
     },
     {
       "test_id": "T_auto_4",
       "requirement_id": "FR_auto_4",
-      "scenario": "Loyalty program access",
+      "scenario": "Receive cancellation confirmation email",
       "steps": [
-        "Log in to the Calm app",
-        "Navigate to the loyalty program",
-        "View exclusive content or discounts"
+        "Cancel subscription",
+        "Wait for 5 minutes",
+        "Check email inbox"
       ],
-      "expected_result": "The user can access exclusive content or discounts based on their loyalty."
+      "expected_result": "The user receives a confirmation email within 5 minutes."
     },
     {
       "test_id": "T_auto_5",
       "requirement_id": "FR_auto_5",
-      "scenario": "User-friendly interface",
+      "scenario": "Access relaxing content",
       "steps": [
-        "Open the Calm app",
-        "Navigate to meditation sessions or sleep stories",
-        "Search for relevant content"
+        "Access content library",
+        "Browse relaxing content",
+        "Verify content variety"
       ],
-      "expected_result": "The user can easily find and access relevant meditation sessions or sleep stories."
+      "expected_result": "The user can find at least 10 different types of relaxing content."
     },
     {
       "test_id": "T_auto_6",
       "requirement_id": "FR_auto_6",
-      "scenario": "Technical support",
+      "scenario": "Access sleep-focused meditation program",
       "steps": [
-        "Open the relevant Calm feature.",
-        "Perform the action described in the requirement.",
-        "Observe the system response."
+        "Access meditation programs",
+        "Find sleep-focused program",
+        "Verify program details"
       ],
-      "expected_result": "The user receives a prompt response or resolution to their technical issue."
+      "expected_result": "The user can find a sleep-focused program with at least 5 sessions."
     },
     {
       "test_id": "T_auto_7",
       "requirement_id": "FR_auto_7",
-      "scenario": "Sleep stories variety",
+      "scenario": "Start free trial",
       "steps": [
-        "Open the relevant Calm feature.",
-        "Perform the action described in the requirement.",
-        "Observe the system response."
+        "Access pricing page",
+        "Start free trial",
+        "Verify trial details"
       ],
-      "expected_result": "The user can find a sleep story that matches their interests or preferences."
+      "expected_result": "The user can start a free trial without providing payment information."
     },
     {
       "test_id": "T_auto_8",
       "requirement_id": "FR_auto_8",
-      "scenario": "Sleep tracking",
+      "scenario": "View pricing page",
       "steps": [
-        "Log in to the Calm app",
-        "View sleep data",
-        "Analyze progress and trends"
+        "Access pricing page",
+        "Browse pricing details",
+        "Verify cost breakdown"
       ],
-      "expected_result": "The user can see their progress and trends over time."
+      "expected_result": "The user can easily find a breakdown of the costs and features."
     },
     {
       "test_id": "T_auto_9",
       "requirement_id": "FR_auto_9",
-      "scenario": "Paywall clarity",
+      "scenario": "Access free soundscapes",
       "steps": [
-        "Open the relevant Calm feature.",
-        "Perform the action described in the requirement.",
-        "Observe the system response."
+        "Access app features",
+        "Find free soundscapes",
+        "Verify soundscapes are ad-free"
       ],
-      "expected_result": "The user can easily understand what features are available for free and what requires a subscription."
+      "expected_result": "The user can access at least 5 free soundscapes without ads."
     },
     {
       "test_id": "T_auto_10",
       "requirement_id": "FR_auto_10",
-      "scenario": "Flexible pricing plan",
+      "scenario": "Distinguish free and paid features",
       "steps": [
-        "Open the relevant Calm feature.",
-        "Perform the action described in the requirement.",
-        "Observe the system response."
+        "Access app features",
+        "Browse features",
+        "Verify feature labels"
       ],
-      "expected_result": "The user can choose a plan that fits their needs and budget."
+      "expected_result": "The user can easily distinguish between free and paid features."
     },
     {
       "test_id": "T_auto_11",
       "requirement_id": "FR_auto_11",
-      "scenario": "Easy cancellation",
+      "scenario": "Access free features",
       "steps": [
-        "Open the relevant Calm feature.",
-        "Perform the action described in the requirement.",
-        "Observe the system response."
+        "Access app",
+        "Find free features",
+        "Verify feature availability"
       ],
-      "expected_result": "The user can easily cancel their subscription in a few steps."
+      "expected_result": "The user can use at least 5 free features without ads or subscription."
     },
     {
       "test_id": "T_auto_12",
       "requirement_id": "FR_auto_12",
-      "scenario": "Subscription model explanation",
+      "scenario": "Compare features",
       "steps": [
-        "Open the relevant Calm feature.",
-        "Perform the action described in the requirement.",
-        "Observe the system response."
+        "Access pricing page",
+        "Compare free and paid features",
+        "Verify feature comparison"
       ],
-      "expected_result": "The user can understand the benefits and features of the subscription."
+      "expected_result": "The user can easily compare features between free and paid versions."
     },
     {
       "test_id": "T_auto_13",
       "requirement_id": "FR_auto_13",
-      "scenario": "Stable app experience",
+      "scenario": "Access daily self-care program",
       "steps": [
-        "Open the relevant Calm feature.",
-        "Perform the action described in the requirement.",
-        "Observe the system response."
+        "Access app",
+        "Find daily meditation program",
+        "Verify program details"
       ],
-      "expected_result": "The user can enjoy a stable and reliable app experience."
+      "expected_result": "The user can find a daily meditation program with at least 5 sessions."
     },
     {
       "test_id": "T_auto_14",
       "requirement_id": "FR_auto_14",
-      "scenario": "Feedback mechanism",
+      "scenario": "Get personalized recommendations",
       "steps": [
-        "Open the relevant Calm feature.",
-        "Perform the action described in the requirement.",
-        "Observe the system response."
+        "Access app",
+        "Verify personalized recommendations",
+        "Browse recommendations"
       ],
-      "expected_result": "The user receives a prompt response or resolution to their technical issue."
+      "expected_result": "The user can find personalized meditation recommendations."
     },
     {
       "test_id": "T_auto_15",
       "requirement_id": "FR_auto_15",
-      "scenario": "Easy cancellation",
+      "scenario": "Navigate to relaxing content",
       "steps": [
-        "Open the relevant Calm feature.",
-        "Perform the action described in the requirement.",
-        "Observe the system response."
+        "Access app",
+        "Find relaxing content",
+        "Verify navigation ease"
       ],
-      "expected_result": "The user can easily cancel their subscription in a few steps."
+      "expected_result": "The user can easily find relaxing content within 2 clicks."
     },
     {
       "test_id": "T_auto_16",
       "requirement_id": "FR_auto_16",
-      "scenario": "Cancellation process explanation",
+      "scenario": "Access sleep stories",
       "steps": [
-        "Open the relevant Calm feature.",
-        "Perform the action described in the requirement.",
-        "Observe the system response."
+        "Access sleep features",
+        "Find sleep stories",
+        "Verify story variety"
       ],
-      "expected_result": "The user can understand the steps involved in cancelling their subscription."
+      "expected_result": "The user can find at least 10 different sleep stories."
     }
   ]
 }

@@ -12,7 +12,6 @@ INPUT_PERSONAS_FILE = "personas/personas_auto.json"
 OUTPUT_SPEC_FILE = "spec/spec_auto.md"
 MODEL_NAME = "meta-llama/llama-4-scout-17b-16e-instruct"
 
-# Make at least 10 requirements.
 # With 8 personas from your current pipeline, 2 per persona gives 16.
 REQUIREMENTS_PER_PERSONA = 2
 

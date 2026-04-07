@@ -12,7 +12,7 @@ INPUT_SPEC_FILE = "spec/spec_auto.md"
 OUTPUT_TESTS_FILE = "tests/tests_auto.json"
 MODEL_NAME = "meta-llama/llama-4-scout-17b-16e-instruct"
 
-# You can raise this to 2 later if you want stronger coverage.
+
 TESTS_PER_REQUIREMENT = 1
 
 
