@@ -2,30 +2,154 @@
   "personas": [
     {
       "id": "P_hybrid_1",
-      "name": "Frequent Fitness Logger",
-      "description": "A user who depends on the app for regular workout tracking and expects logging to work reliably during or immediately after exercise.",
+      "name": "Daily Calm User",
+      "description": "A busy professional who uses Calm daily to unwind and prepare for work. They appreciate the app's guided meditations and sleep stories, and value the sense of calm and focus it brings to their daily life.",
       "derived_from_group": "H1",
       "goals": [
-        "Log workouts quickly",
-        "Track activities without interruption"
+        "Build a consistent meditation or mindfulness routine",
+        "Reduce stress and anxiety during the day",
+        "Feel calmer, more focused, and emotionally grounded"
       ],
       "pain_points": [
-        "The app crashes while saving workouts",
-        "Previously entered activity data may disappear"
+        "Some useful content requires a subscription",
+        "Navigation can feel cluttered or poorly organized for finding desired content"
       ],
       "context": [
-        "Using the app during exercise sessions",
-        "Using the app outdoors or while moving"
+        "Uses the app as part of a daily or frequent self-care routine",
+        "May rely on meditation, breathing exercises, music, or short guided sessions",
+        "Uses Calm for general mental wellness rather than one single feature"
       ],
       "constraints": [
-        "Workout logging must complete without crashing",
-        "Saved workout data must persist"
+        "Needs content that is easy to access and simple to follow",
+        "Has limited time and benefits from short, flexible sessions"
       ],
       "evidence_reviews": [
-        "rev_12",
-        "rev_41"
+        "rev_7",
+        "rev_20",
+        "rev_70"
+      ]
+    },
+    {
+      "id": "P_hybrid_2",
+      "name": "Persona for Sleep Improvement with Calm",
+      "description": "This persona represents users who primarily rely on Calm to fall asleep, get back to sleep, or improve sleep quality. They value sleep stories, soothing sounds, and bedtime meditations that reduce mental racing at night. Their reviews show that Calm is often used in moments of immediate need, especially when insomnia, anxiety, or restlessness makes sleep difficult.",
+      "derived_from_group": "H2",
+      "goals": [
+        "Fall asleep more easily",
+        "Reduce nighttime stress or mental overactivity",
+        "Use sleep stories, sounds, or meditations as a dependable bedtime aid"
       ],
-      "notes": "Refined the persona description and removed an unsupported assumption about synchronization."
+      "pain_points": [
+        "Sleep related content can be interrupted by crashes, poor navigation, or locked features",
+        "Too many choices or setup steps can make it harder to use when tired"
+      ],
+      "context": [
+        "Often uses the app at bedtime or after waking during the night",
+        "Looks for low effort, soothing audio content",
+        "May be dealing with stress, insomnia, or inconsistent sleep"
+      ],
+      "constraints": [
+        "Needs a simple and dependable experience at night",
+        "Cannot spend much time browsing or troubleshooting when trying to sleep"
+      ],
+      "evidence_reviews": [
+        "rev_2",
+        "rev_16",
+        "rev_19",
+        "rev_22"
+      ]
+    },
+    {
+      "id": "P_hybrid_3",
+      "name": "Free User",
+      "description": "User likes the app's calming audio and sleep support but is frustrated by the limited free version and heavy paywall. They started free content and are dissatisfied when access is restricted or repeatedly pushed toward subscription.",
+      "derived_from_group": "H3",
+      "goals": [
+        "Access calming audio or sleep sounds without major barriers",
+        "Try the app meaningfully before paying",
+        "Use simple relaxation features such as white noise, rain, or soundscapes"
+      ],
+      "pain_points": [
+        "Too much content is locked behind subscription",
+        "Previously free or expected basic features feel restricted",
+        "Frequent upselling and limited free listens feel frustrating"
+      ],
+      "context": [
+        "Often uses the app for basic relaxation or sleep support rather than premium coaching",
+        "May compare Calm with free alternatives such as YouTube or other sleep apps",
+        "Usually wants quick access to audio without account or subscription friction"
+      ],
+      "constraints": [
+        "Price sensitive and unwilling or unable to justify the subscription cost",
+        "Needs enough free functionality to decide whether the app is worth paying for"
+      ],
+      "evidence_reviews": [
+        "rev_5",
+        "rev_8",
+        "rev_17",
+        "rev_34"
+      ]
+    },
+    {
+      "id": "P_hybrid_4",
+      "name": "Frustrated User with Technical Issues",
+      "description": "User wants to keep using the app for relaxation and sleep support but is frustrated by technical issues such as crashes, freezes, or audio problems that disrupt their experience and reduce trust in the app. They are mad that an app for relaxation has technical problems that create more stress instead of less.",
+      "derived_from_group": "H4",
+      "goals": [
+        "Use meditation or sleep content without interruptions",
+        "Trust the app to work consistently during important moments such as bedtime or relaxation",
+        "Get value from the content they already enjoy"
+      ],
+      "pain_points": [
+        "App crashes, freezes, or becomes slow",
+        "Audio stops unexpectedly or behaves inconsistently",
+        "Buggy behavior breaks calm routines and reduces trust in the app"
+      ],
+      "context": [
+        "Often uses the app repeatedly and may already like the content library",
+        "May use the app for sleep, meditation, or daily relaxation",
+        "Technical failures are especially disruptive because they happen during vulnerable or time sensitive moments"
+      ],
+      "constraints": [
+        "Needs a stable mobile experience with minimal troubleshooting",
+        "Has low tolerance for glitches in a wellness app, especially when paying for it"
+      ],
+      "evidence_reviews": [
+        "rev_31",
+        "rev_68",
+        "rev_76",
+        "rev_80"
+      ]
+    },
+    {
+      "id": "P_hybrid_6",
+      "name": "Concerened Subscriber",
+      "description": "Users who are upset by difficulty canceling subscriptions, unexpected charges, trial transitions, or poor support during billing problems.",
+      "derived_from_group": "H5",
+      "goals": [
+        "Start or try the service without risk of unwanted charges",
+        "Cancel a trial or subscription easily and confidently",
+        "Have transparent control over billing and renewal status"
+      ],
+      "pain_points": [
+        "Cancellation process feels confusing or inaccessible",
+        "Unexpected or repeated charges create distrust"
+      ],
+      "context": [
+        "May have joined through a free trial or app-store subscription flow",
+        "Often interacts with Calm during billing or account-management moments rather than for wellness use alone",
+        "Trust in the product is heavily affected by the subscription experience"
+      ],
+      "constraints": [
+        "Needs clear billing information and visible subscription controls",
+        "Will quickly abandon the app if cancellation or refunds feel difficult"
+      ],
+      "evidence_reviews": [
+        "rev_6",
+        "rev_11",
+        "rev_21",
+        "rev_26"
+      ]
     }
   ]
 }

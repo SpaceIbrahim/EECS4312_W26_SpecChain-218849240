@@ -25,7 +25,7 @@ EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
 FIXED_K = 8
 
 # Max number of example reviews kept per group in output json
-MAX_EXAMPLE_REVIEWS = 15
+MAX_EXAMPLE_REVIEWS = 50
 
 # Max number of review indexes shown to the LLM per cluster
 MAX_REVIEW_INDEXES_FOR_PROMPT = 15

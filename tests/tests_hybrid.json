@@ -3,14 +3,112 @@
     {
       "test_id": "T_hybrid_1",
       "requirement_id": "FR_hybrid_1",
-      "scenario": "Save a workout entry without crashing",
+      "scenario": "Browse meditation content by category from the home screen",
       "steps": [
-        "Open the workout logging feature",
-        "Enter workout information",
-        "Submit the workout"
+        "Open the application home screen",
+        "Select a meditation content category",
+        "Observe the content list shown for the selected category"
       ],
-      "expected_result": "The workout is saved successfully and the application does not crash.",
-      "notes": "Revised the expected result to match the updated hybrid requirement."
+      "expected_result": "The system displays a list of meditation sessions relevant to the selected content category."
+    },
+    {
+      "test_id": "T_hybrid_2",
+      "requirement_id": "FR_hybrid_2",
+      "scenario": "Filter meditation sessions by selected duration",
+      "steps": [
+        "Open the meditation library",
+        "Apply a duration filter such as 5, 10, or 15 minutes",
+        "Review the sessions shown after the filter is applied"
+      ],
+      "expected_result": "Only meditation sessions matching the selected duration are displayed."
+    },
+    {
+      "test_id": "T_hybrid_3",
+      "requirement_id": "FR_hybrid_3",
+      "scenario": "View sleep related content in the sleep section",
+      "steps": [
+        "Navigate to the sleep section of the application",
+        "Browse the available sleep content",
+        "Inspect the content items presented on the screen"
+      ],
+      "expected_result": "The system displays sleep related audio options such as sleep stories, sleep meditations, or calming audio."
+    },
+    {
+      "test_id": "T_hybrid_4",
+      "requirement_id": "FR_hybrid_4",
+      "scenario": "Reach selected sleep content through onboarding",
+      "steps": [
+        "Start the onboarding flow",
+        "Select a preferred sleep content option during onboarding",
+        "Continue to the next screen"
+      ],
+      "expected_result": "The system takes the user directly to the selected sleep content without unnecessary extra steps."
+    },
+    {
+      "test_id": "T_hybrid_5",
+      "requirement_id": "FR_hybrid_5",
+      "scenario": "Distinguish free content from locked content in the library",
+      "steps": [
+        "Sign in as a free user or use a non subscribed account",
+        "Open the content library",
+        "Inspect how content items are displayed"
+      ],
+      "expected_result": "The system clearly distinguishes free content items from subscription locked items."
+    },
+    {
+      "test_id": "T_hybrid_6",
+      "requirement_id": "FR_hybrid_6",
+      "scenario": "Show subscription information after selecting locked content",
+      "steps": [
+        "Sign in as a free user or use a non subscribed account",
+        "Select a content item marked as locked",
+        "Observe the message and options shown after access is denied"
+      ],
+      "expected_result": "The system informs the user that the selected item requires a subscription and presents available subscription options."
+    },
+    {
+      "test_id": "T_hybrid_7",
+      "requirement_id": "FR_hybrid_7",
+      "scenario": "Restore playback position after a temporary interruption",
+      "steps": [
+        "Start playing an audio session",
+        "Pause the app by simulating a temporary interruption such as minimizing the app or receiving a phone interruption",
+        "Resume the app and reopen the same audio session"
+      ],
+      "expected_result": "The system restores the session at or near the last known playback position before the interruption."
+    },
+    {
+      "test_id": "T_hybrid_8",
+      "requirement_id": "FR_hybrid_8",
+      "scenario": "Display current subscription plan and renewal details",
+      "steps": [
+        "Open the account or subscription management screen",
+        "Wait for the subscription details to load",
+        "Review the subscription information shown"
+      ],
+      "expected_result": "The system displays the current subscription status, billing plan, and next renewal or expiry date."
+    },
+    {
+      "test_id": "T_hybrid_9",
+      "requirement_id": "FR_hybrid_9",
+      "scenario": "Provide a visible path to subscription cancellation",
+      "steps": [
+        "Open the account or subscription management screen",
+        "Select the option to manage the subscription",
+        "Review the controls or instructions provided"
+      ],
+      "expected_result": "The system provides a visible path to cancellation instructions or cancellation controls."
+    },
+    {
+      "test_id": "T_hybrid_10",
+      "requirement_id": "FR_hybrid_10",
+      "scenario": "Show active trial and auto renewal status",
+      "steps": [
+        "Use an account with an active trial or subscription",
+        "Open the subscription details screen",
+        "Review the subscription status information displayed"
+      ],
+      "expected_result": "The system displays whether a trial is active and whether automatic renewal is scheduled."
     }
   ]
 }

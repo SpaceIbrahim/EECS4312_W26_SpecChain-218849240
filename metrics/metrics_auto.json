@@ -1,4 +1,5 @@
 {
+  "pipeline": "auto",
   "dataset_size": 3930,
   "persona_count": 8,
   "requirements_count": 16,
