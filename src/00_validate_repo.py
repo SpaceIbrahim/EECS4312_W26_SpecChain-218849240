@@ -56,7 +56,7 @@ def main() -> int:
     ]
 
     required_libraries = [
-        "groq", "sklearn", "numpy", "nltk", "google_play_scraper",
+        "groq", "sklearn", "numpy", "nltk", "google_play_scraper", "num2words", "sentence-transformers",
     ]
 
     missing_dirs = []

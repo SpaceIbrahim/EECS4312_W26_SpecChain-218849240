@@ -107,7 +107,7 @@ The cleaned dataset was produced by removing duplicates, empty reviews, and extr
 ### 1. Validate repository structure
 ```bash
 # Make sure you are in the repo directory
-python src/00_validate_repo.py
+python3 src/00_validate_repo.py
 ````
 
 ### 2. Set your Groq API key
@@ -119,7 +119,10 @@ The automated pipeline requires a Groq API key.
 ```bash
 export GROQ_API_KEY="your_key_here"
 ```
-
+This is my free groq key. It expires in seven days.
+```bash
+GROQ_API_KEY="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"
+```
 #### Windows PowerShell
 
 ```powershell
@@ -129,7 +132,7 @@ $env:GROQ_API_KEY="your_key_here"
 ### 3. Run the full automated pipeline
 
 ```bash
-python src/run_all.py
+python3 src/run_all.py
 ```
 
 ### 4. Open comparison results
@@ -145,8 +148,10 @@ Before running the project, make sure these Python libraries are installed:
 - numpy
 - nltk
 - google-play-scraper
+- num2words
+- sentence-transformers
 
 You can install them with:
 
 ```bash
-pip install groq scikit-learn numpy nltk spacy google-play-scraper
+pip install groq scikit-learn numpy nltk spacy google-play-scraper num2words sentence-transformers
