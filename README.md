@@ -119,7 +119,7 @@ The automated pipeline requires a Groq API key.
 ```bash
 export GROQ_API_KEY="your_key_here"
 ```
-This is my free groq key. It expires in seven days.
+This is my free groq key. It expires in 4 days (Groq does not let you push these keys, so you will have to use your own after April 11th).
 ```bash
 GROQ_API_KEY="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"
 ```
@@ -150,8 +150,13 @@ Before running the project, make sure these Python libraries are installed:
 - google-play-scraper
 - num2words
 - sentence-transformers
+- pillow
 
 You can install them with:
 
 ```bash
 pip install groq scikit-learn numpy nltk spacy google-play-scraper num2words sentence-transformers
+```
+You may also need to do the below command:
+```bash
+pip install --upgrade Pillow
